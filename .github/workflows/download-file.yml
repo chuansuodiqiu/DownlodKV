@@ -29,7 +29,8 @@ jobs:
         MAX_RETRIES=3
 
         for link in "${LINKS[@]}"; do
-          filename=$(basename "$link")
+          # 从链接中提取文件名，去掉查询字符串部分
+          filename=$(basename "$link" | cut -d '?' -f 1)
           echo "Downloading $filename"
           
           retries=0
