@@ -1,1 +1,21 @@
-
+IP地址,端口,TLS,域名后缀,数据中心,08-14-04:51:32,城市,网络延迟(ms),下载速度(MB/s)
+206.238.236.122,2087,true,US,SJC,North America,San Jose,178,7.7
+45.205.0.244,2087,true,US,SJC,North America,San Jose,181,7.4
+206.238.237.252,2087,true,US,SJC,North America,San Jose,171,7.3
+206.238.237.235,2087,true,US,SJC,North America,San Jose,177,7.3
+206.238.236.41,2087,true,US,SJC,North America,San Jose,178,7.1
+206.238.236.161,2087,true,US,SJC,North America,San Jose,182,7.0
+206.238.237.244,2087,true,US,SJC,North America,San Jose,181,7.0
+206.238.237.146,2087,true,US,SJC,North America,San Jose,184,7.0
+206.238.236.37,2087,true,US,SJC,North America,San Jose,184,6.9
+206.238.237.234,2087,true,US,SJC,North America,San Jose,176,6.8
+206.238.236.93,2087,true,US,SJC,North America,San Jose,186,6.7
+206.238.237.219,2087,true,US,SJC,North America,San Jose,177,6.7
+206.238.236.195,2087,true,US,SJC,North America,San Jose,175,6.7
+45.205.0.211,2087,true,US,SJC,North America,San Jose,183,6.6
+156.238.18.100,2087,true,US,SJC,North America,San Jose,174,6.6
+45.205.0.192,2087,true,US,SJC,North America,San Jose,191,6.5
+154.218.15.210,2087,true,US,SJC,North America,San Jose,174,6.3
+206.238.237.209,2087,true,US,SJC,North America,San Jose,177,6.2
+206.238.236.176,2087,true,US,SJC,North America,San Jose,184,5.8
+206.238.236.30,2087,true,US,SJC,North America,San Jose,181,5.0
