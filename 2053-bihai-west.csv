@@ -1,26 +1,25 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-14-04:51:32,城市,网络延迟(ms),下载速度(MB/s)
-45.205.0.109,2053,true,US,SJC,North America,San Jose,189,7.8
-206.238.236.210,2053,true,US,SJC,North America,San Jose,176,7.4
-206.238.237.215,2053,true,US,SJC,North America,San Jose,181,7.4
-206.238.236.222,2053,true,US,SJC,North America,San Jose,188,7.3
-206.238.237.11,2053,true,US,SJC,North America,San Jose,182,7.3
-206.238.237.181,2053,true,US,SJC,North America,San Jose,184,7.3
-206.238.236.234,2053,true,US,SJC,North America,San Jose,172,7.3
-206.238.236.140,2053,true,US,SJC,North America,San Jose,177,7.3
-206.238.236.177,2053,true,US,SJC,North America,San Jose,189,7.2
-206.238.236.135,2053,true,US,SJC,North America,San Jose,173,7.1
-206.238.237.153,2053,true,US,SJC,North America,San Jose,173,6.9
-206.238.236.213,2053,true,US,SJC,North America,San Jose,189,6.8
-206.238.236.110,2053,true,US,SJC,North America,San Jose,177,6.8
-206.238.237.240,2053,true,US,SJC,North America,San Jose,176,6.8
-206.238.236.163,2053,true,US,SJC,North America,San Jose,180,6.5
-206.238.236.159,2053,true,US,SJC,North America,San Jose,180,6.5
-206.238.237.75,2053,true,US,SJC,North America,San Jose,172,6.4
-206.238.237.143,2053,true,US,SJC,North America,San Jose,172,6.4
-206.238.236.253,2053,true,US,SJC,North America,San Jose,182,6.2
-206.238.236.198,2053,true,US,SJC,North America,San Jose,183,6.0
-45.205.0.39,2053,true,US,SJC,North America,San Jose,174,5.8
-18.194.183.74,2053,true,DE,FRA,Europe,Frankfurt,208,5.7
-206.238.236.156,2053,true,US,SJC,North America,San Jose,186,5.6
-206.238.236.255,2053,true,US,SJC,North America,San Jose,181,5.5
-206.238.237.115,2053,true,US,SJC,North America,San Jose,181,5.1
+IP地址,端口,TLS,域名后缀,数据中心,08-14-06:51:23,城市,网络延迟(ms),下载速度(MB/s)
+206.238.236.140,2053,true,US,SJC,North America,San Jose,181,9.9
+206.238.236.198,2053,true,US,SJC,North America,San Jose,182,9.5
+206.238.237.240,2053,true,US,SJC,North America,San Jose,183,9.1
+206.238.236.253,2053,true,US,SJC,North America,San Jose,189,9.1
+206.238.236.173,2053,true,US,SJC,North America,San Jose,185,9.0
+206.238.236.156,2053,true,US,SJC,North America,San Jose,180,8.7
+206.238.236.159,2053,true,US,SJC,North America,San Jose,189,8.7
+206.238.236.213,2053,true,US,SJC,North America,San Jose,185,8.5
+206.238.236.135,2053,true,US,SJC,North America,San Jose,179,8.3
+206.238.236.210,2053,true,US,SJC,North America,San Jose,174,8.1
+206.238.236.110,2053,true,US,SJC,North America,San Jose,187,7.8
+206.238.237.115,2053,true,US,SJC,North America,San Jose,187,7.6
+18.194.183.74,2053,true,DE,FRA,Europe,Frankfurt,212,7.1
+206.238.237.181,2053,true,US,SJC,North America,San Jose,174,7.0
+206.238.237.143,2053,true,US,SJC,North America,San Jose,188,7.0
+206.238.237.11,2053,true,US,SJC,North America,San Jose,191,6.8
+206.238.236.163,2053,true,US,SJC,North America,San Jose,190,6.6
+206.238.237.153,2053,true,US,SJC,North America,San Jose,179,6.3
+206.238.237.66,2053,true,US,SJC,North America,San Jose,189,5.8
+206.238.236.177,2053,true,US,SJC,North America,San Jose,188,5.6
+167.99.189.109,2053,true,CA,YYZ,North America,Toronto,250,5.4
+13.49.72.54,2053,true,SE,ARN,Europe,Stockholm,249,5.4
+3.66.67.78,2053,true,DE,FRA,Europe,Frankfurt,214,5.2
+206.238.237.215,2053,true,US,SJC,North America,San Jose,182,5.1
