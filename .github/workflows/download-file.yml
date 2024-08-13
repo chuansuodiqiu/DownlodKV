@@ -1,0 +1,70 @@
+name: Download Files
+
+on:
+  schedule:
+    - cron: '0,30 * * * *'  # 每半小时执行一次
+  workflow_dispatch:  # 允许手动触发
+    inputs:
+      reason:
+        description: 'Reason for manual run'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  download_files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set timezone to Beijing
+      run: |
+        sudo timedatectl set-timezone Asia/Shanghai
+
+    - name: Log current datetime in Beijing timezone
+      run: |
+        echo "Current Beijing time: $(date '+%Y-%m-%d-%H:%M:%S')"
+
+    - name: Download files
+      env:
+        DOWNLOAD_LINKS: ${{ secrets.DOWNLOAD_LINKS }}
+      run: |
+        # 使用逗号分隔链接
+        IFS=',' read -ra LINKS <<< "$DOWNLOAD_LINKS"
+
+        # 最大重试次数
+        MAX_RETRIES=3
+
+        for link in "${LINKS[@]}"; do
+          filename=$(basename "$link")
+          echo "Downloading $filename"
+          
+          # 初始化重试次数
+          retries=0
+          success=false
+          
+          # 尝试下载文件，最多重试 MAX_RETRIES 次
+          while [ $retries -lt $MAX_RETRIES ]; do
+            # 使用 curl 下载文件
+            curl -o "$filename" "$link"
+            
+            # 检查 curl 命令的返回值
+            if [ $? -eq 0 ]; then
+              echo "Successfully downloaded $filename"
+              success=true
+              break
+            else
+              # 下载失败，增加重试次数并提示
+              retries=$((retries + 1))
+              echo "Failed to download $filename. Retry $retries/$MAX_RETRIES..."
+              sleep 2  # 等待 2 秒后重试
+            fi
+          done
+          
+          # 如果所有重试都失败，则退出
+          if [ "$success" = false ]; then
+            echo "Failed to download $filename after $MAX_RETRIES attempts."
+            exit 1
+          fi
+        done
