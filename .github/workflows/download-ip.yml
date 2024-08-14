@@ -62,18 +62,34 @@ jobs:
       id: file_stats
       run: |
         LOG_ENTRIES=""
+        TOTAL_ADDED=0
+        TOTAL_DELETED=0
+        FILE_COUNT=0
+
         for file in ${{ env.updated_files }}; do
           ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
           DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
+
+          # 如果没有新增或删除行，设置为0
+          [ -z "$ADDED_LINES" ] && ADDED_LINES=0
+          [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
           LOG_ENTRIES="$LOG_ENTRIES\nFile: $file\nLines Added: $ADDED_LINES, Lines Deleted: $DELETED_LINES\n"
+
+          TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
+          TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
+          FILE_COUNT=$((FILE_COUNT + 1))
         done
+
         echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
+        echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
+        echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
+        echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
 
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Update Time: ${{ env.time }}${{ env.log_entries }}\n---\n"
+        NEW_LOG_ENTRY="Update Time: ${{ env.time }}\nTotal Files Updated: ${{ env.file_count }}\nTotal Lines Added: ${{ env.total_added }}, Total Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
         
         # 检查日志文件是否存在，如果存在，则插入到文件头部
         if [ -f "$LOG_FILE" ]; then
