@@ -1,7 +1,7 @@
 name: Download and Publish Files
 
 on:
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   download_and_publish:
@@ -15,7 +15,6 @@ jobs:
       id: beijing_time
       run: |
         sudo timedatectl set-timezone Asia/Shanghai
-        echo "Current Beijing time: $(date '+%Y-%m-%d %H:%M:%S')"
         echo "time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
         echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
@@ -68,7 +67,7 @@ jobs:
           DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES\n$file | 新增行: $ADDED_LINES | 删除行: $DELETED_LINES"
+            LOG_ENTRIES="$LOG_ENTRIES\n$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
             TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
             FILE_COUNT=$((FILE_COUNT + 1))
@@ -83,31 +82,31 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n"
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
+        TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n"
+        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
         
         if [ -f "$LOG_FILE" ]; then
-          TODAY_ENTRY=$(grep -E "^今日: ${date} " "$LOG_FILE")
+          TODAY_ENTRY=$(grep -E "^Today: ${date} " "$LOG_FILE")
           
           if [ -z "$TODAY_ENTRY" ]; then
             sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
-          else
-            TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $2}')
-            TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $2}')
-            TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $2}')
+          else:
+            TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $3}')
+            TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $3}')
+            TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $3}')
             
             TODAY_TOTAL_ADDED=$((TODAY_TOTAL_ADDED + ${{ env.total_added }}))
             TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
             TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
             
-            UPDATED_TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: $TODAY_FILE_COUNT | 新增行: $TODAY_TOTAL_ADDED | 删除行: $TODAY_TOTAL_DELETED"
-            sed -i "s/^今日: ${date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
+            UPDATED_TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: $TODAY_FILE_COUNT | Lines Added: $TODAY_TOTAL_ADDED | Lines Deleted: $TODAY_TOTAL_DELETED"
+            sed -i "s/^Today: ${date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
           fi
-        else
+        else:
           echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
         fi
         
-        # 将新日志条目插入到文件开头
+        # Prepend the new log entry to the file
         sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
 
         cat "$LOG_FILE"
@@ -119,3 +118,19 @@ jobs:
         git add .
         git commit -m "Update files - $(date '+%Y-%m-%d-%H:%M:%S')"
         git push
+
+    - name: Send Notification to Telegram
+      env:
+        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        # Build the message
+        TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
+        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        
+        MESSAGE="$TODAY_LOG_ENTRY\n$NEW_LOG_ENTRY"
+
+        # Send the message via Telegram API
+        curl -s -X POST https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage \
+          -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
+          -d text="$MESSAGE"
