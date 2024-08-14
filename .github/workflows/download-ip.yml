@@ -1,8 +1,6 @@
 name: Download and Publish Files
 
 on:
-  # schedule:
-    # - cron: '0 0,6,12,18,22 * * *'  # 每6小时自动执行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -18,8 +16,10 @@ jobs:
         sudo timedatectl set-timezone Asia/Shanghai
 
     - name: Log current datetime in Beijing timezone
+      id: beijing_time
       run: |
         echo "Current Beijing time: $(date '+%Y-%m-%d-%H:%M:%S')"
+        echo "time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
     - name: Download files
       env:
@@ -27,7 +27,7 @@ jobs:
       run: |
         IFS=',' read -ra LINKS <<< "$DOWNLOAD_LINKS"
         MAX_RETRIES=3
-
+        UPDATED_FILES=""
         for link in "${LINKS[@]}"; do
           # 从链接中提取文件名，去掉查询字符串部分
           filename=$(basename "$link" | cut -d '?' -f 1)
@@ -41,6 +41,7 @@ jobs:
             
             if [ $? -eq 0 ]; then
               echo "Successfully downloaded $filename"
+              UPDATED_FILES="$UPDATED_FILES $filename"
               success=true
               break
             else
@@ -55,6 +56,33 @@ jobs:
             exit 1
           fi
         done
+        echo "updated_files=$(echo $UPDATED_FILES | xargs)" >> $GITHUB_ENV
+
+    - name: Capture Git Changes for Each File
+      id: file_stats
+      run: |
+        LOG_ENTRIES=""
+        for file in ${{ env.updated_files }}; do
+          ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
+          DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
+          
+          LOG_ENTRIES="$LOG_ENTRIES\nFile: $file\nLines Added: $ADDED_LINES, Lines Deleted: $DELETED_LINES\n"
+        done
+        echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
+
+    - name: Update Log File
+      run: |
+        LOG_FILE="update_log.txt"
+        NEW_LOG_ENTRY="Update Time: ${{ env.time }}${{ env.log_entries }}\n---\n"
+        
+        # 检查日志文件是否存在，如果存在，则插入到文件头部
+        if [ -f "$LOG_FILE" ]; then
+          (echo -e "$NEW_LOG_ENTRY" && cat "$LOG_FILE") > tmpfile && mv tmpfile "$LOG_FILE"
+        else
+          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
+        fi
+        
+        cat "$LOG_FILE"
 
     - name: Commit changes
       run: |
