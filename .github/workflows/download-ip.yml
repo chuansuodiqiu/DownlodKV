@@ -12,13 +12,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set timezone to Beijing
-      run: |
-        sudo timedatectl set-timezone Asia/Shanghai
-
-    - name: Log current datetime in Beijing timezone
       id: beijing_time
       run: |
-        echo "Current Beijing time: $(date '+%Y-%m-%d-%H:%M:%S')"
+        sudo timedatectl set-timezone Asia/Shanghai
+        echo "Current Beijing time: $(date '+%Y-%m-%d %H:%M:%S')"
         echo "time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
         echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
@@ -30,7 +27,6 @@ jobs:
         MAX_RETRIES=3
         UPDATED_FILES=""
         for link in "${LINKS[@]}"; do
-          # 从链接中提取文件名，去掉查询字符串部分
           filename=$(basename "$link" | cut -d '?' -f 1)
           echo "Downloading $filename"
           
@@ -71,7 +67,6 @@ jobs:
           ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
           DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
-          # 仅当新增或删除行数不为0时才记录日志
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
             LOG_ENTRIES="$LOG_ENTRIES\n$file | 新增行: $ADDED_LINES | 删除行: $DELETED_LINES"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
@@ -88,22 +83,15 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
+        TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
         
-        # 检查日志文件是否存在，如果存在，则插入到文件头部
         if [ -f "$LOG_FILE" ]; then
-          # 提取当前日期的日志条目
-          TODAY_ENTRY=$(grep -E "^今日: ${env.date//-/:} " "$LOG_FILE")
+          TODAY_ENTRY=$(grep -E "^今日: ${env.date} " "$LOG_FILE")
           
           if [ -z "$TODAY_ENTRY" ]; then
-            # 如果今天没有日志条目，创建一个新的
-            TODAY_TOTAL_ADDED=${{ env.total_added }}
-            TODAY_TOTAL_DELETED=${{ env.total_deleted }}
-            TODAY_FILE_COUNT=${{ env.file_count }}
-            TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: $TODAY_FILE_COUNT | 新增行: $TODAY_TOTAL_ADDED | 删除行: $TODAY_TOTAL_DELETED\n"
-            NEW_LOG_ENTRY="$TODAY_LOG_ENTRY$NEW_LOG_ENTRY"
+            sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
           else
-            # 如果今天已有日志条目，更新该条目
             TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $2}')
             TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $2}')
             TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $2}')
@@ -112,14 +100,16 @@ jobs:
             TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
             TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
             
-            TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: $TODAY_FILE_COUNT | 新增行: $TODAY_TOTAL_ADDED | 删除行: $TODAY_TOTAL_DELETED\n"
-            sed -i "s/^今日: ${env.date//-/:} .*$/$TODAY_LOG_ENTRY/" "$LOG_FILE"
-            NEW_LOG_ENTRY="$NEW_LOG_ENTRY"
+            UPDATED_TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: $TODAY_FILE_COUNT | 新增行: $TODAY_TOTAL_ADDED | 删除行: $TODAY_TOTAL_DELETED"
+            sed -i "s/^今日: ${env.date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
           fi
         else
-          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
+          echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
         fi
         
+        # 将新日志条目插入到文件开头
+        sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
+
         cat "$LOG_FILE"
 
     - name: Commit changes
