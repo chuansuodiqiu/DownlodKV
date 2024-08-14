@@ -82,32 +82,11 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n"
+        TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
-        
-        if [ -f "$LOG_FILE" ]; then
-          TODAY_ENTRY=$(grep -E "^Today: ${date} " "$LOG_FILE")
-          
-          if [ -z "$TODAY_ENTRY" ]; then
-            sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
-          else:
-            TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $3}')
-            TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $3}')
-            TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $3}')
-            
-            TODAY_TOTAL_ADDED=$((TODAY_TOTAL_ADDED + ${{ env.total_added }}))
-            TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
-            TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
-            
-            UPDATED_TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: $TODAY_FILE_COUNT | Lines Added: $TODAY_TOTAL_ADDED | Lines Deleted: $TODAY_TOTAL_DELETED"
-            sed -i "s/^Today: ${date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
-          fi
-        else:
-          echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
-        fi
-        
-        # Prepend the new log entry to the file
-        sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
+
+        # Create or initialize the log file
+        echo -e "$TODAY_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
 
         cat "$LOG_FILE"
 
