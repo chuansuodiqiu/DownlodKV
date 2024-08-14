@@ -1,20 +1,7 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-14-06:51:23,城市,网络延迟(ms),下载速度(MB/s)
-206.238.237.158,2096,true,US,SJC,North America,San Jose,175,9.2
-206.238.236.231,2096,true,US,SJC,North America,San Jose,175,9.0
-206.238.236.243,2096,true,US,SJC,North America,San Jose,173,8.9
-206.238.237.91,2096,true,US,SJC,North America,San Jose,183,7.8
-206.238.237.79,2096,true,US,SJC,North America,San Jose,179,7.8
-206.238.236.237,2096,true,US,SJC,North America,San Jose,180,7.6
-206.238.237.61,2096,true,US,SJC,North America,San Jose,182,7.5
-206.238.236.114,2096,true,US,SJC,North America,San Jose,172,7.4
-206.238.236.246,2096,true,US,SJC,North America,San Jose,185,7.2
-206.238.237.65,2096,true,US,SJC,North America,San Jose,177,7.2
-206.238.237.111,2096,true,US,SJC,North America,San Jose,179,7.0
-156.238.18.172,2096,true,US,SJC,North America,San Jose,183,6.9
-206.238.236.145,2096,true,US,SJC,North America,San Jose,181,6.9
-156.238.18.190,2096,true,US,SJC,North America,San Jose,181,6.7
-35.157.121.50,2096,true,DE,FRA,Europe,Frankfurt,243,6.4
-206.238.236.101,2096,true,US,SJC,North America,San Jose,189,6.1
-206.238.237.139,2096,true,US,SJC,North America,San Jose,184,6.1
-206.238.237.147,2096,true,US,SJC,North America,San Jose,182,5.9
-206.238.237.224,2096,true,US,SJC,North America,San Jose,173,5.0
+IP地址,端口,TLS,域名后缀,数据中心,08-14-08:39:21,城市,网络延迟(ms),下载速度(MB/s)
+206.238.237.139,2096,true,US,SJC,North America,San Jose,186,7.9
+206.238.236.246,2096,true,US,SJC,North America,San Jose,178,7.4
+206.238.236.243,2096,true,US,SJC,North America,San Jose,182,7.2
+156.238.18.190,2096,true,US,SJC,North America,San Jose,173,6.9
+206.238.237.61,2096,true,US,SJC,North America,San Jose,181,6.4
+206.238.236.237,2096,true,US,SJC,North America,San Jose,181,6.2
