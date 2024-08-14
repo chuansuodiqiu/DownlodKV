@@ -107,9 +107,11 @@ jobs:
         TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
         
-        MESSAGE="$TODAY_LOG_ENTRY\n$NEW_LOG_ENTRY"
+        # Use Markdown formatting to handle new lines
+        MESSAGE="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n\nThis Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n\n${{ env.log_entries }}\n---"
 
         # Send the message via Telegram API
         curl -s -X POST https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage \
           -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-          -d text="$MESSAGE"
+          -d text="$MESSAGE" \
+          -d parse_mode=Markdown
