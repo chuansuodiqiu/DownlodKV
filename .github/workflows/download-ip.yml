@@ -93,7 +93,7 @@ jobs:
         # 检查日志文件是否存在，如果存在，则插入到文件头部
         if [ -f "$LOG_FILE" ]; then
           # 提取当前日期的日志条目
-          TODAY_ENTRY=$(grep -E "^今日: ${GITHUB_ENV:date} " "$LOG_FILE")
+          TODAY_ENTRY=$(grep -E "^今日: ${env.date//-/:} " "$LOG_FILE")
           
           if [ -z "$TODAY_ENTRY" ]; then
             # 如果今天没有日志条目，创建一个新的
@@ -113,7 +113,7 @@ jobs:
             TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
             
             TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: $TODAY_FILE_COUNT | 新增行: $TODAY_TOTAL_ADDED | 删除行: $TODAY_TOTAL_DELETED\n"
-            sed -i "s/^今日: ${GITHUB_ENV:date} .*$/$TODAY_LOG_ENTRY/" "$LOG_FILE"
+            sed -i "s/^今日: ${env.date//-/:} .*$/$TODAY_LOG_ENTRY/" "$LOG_FILE"
             NEW_LOG_ENTRY="$NEW_LOG_ENTRY"
           fi
         else
