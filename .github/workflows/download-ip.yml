@@ -87,7 +87,7 @@ jobs:
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
         
         if [ -f "$LOG_FILE" ]; then
-          TODAY_ENTRY=$(grep -E "^今日: ${env.date} " "$LOG_FILE")
+          TODAY_ENTRY=$(grep -E "^今日: ${date} " "$LOG_FILE")
           
           if [ -z "$TODAY_ENTRY" ]; then
             sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
@@ -101,7 +101,7 @@ jobs:
             TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
             
             UPDATED_TODAY_LOG_ENTRY="今日: ${{ env.date }} | 更新文件: $TODAY_FILE_COUNT | 新增行: $TODAY_TOTAL_ADDED | 删除行: $TODAY_TOTAL_DELETED"
-            sed -i "s/^今日: ${env.date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
+            sed -i "s/^今日: ${date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
           fi
         else
           echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
