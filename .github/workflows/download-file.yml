@@ -2,7 +2,7 @@ name: Download and Publish Files
 
 on:
   schedule:
-    - cron: '0,30 * * * *'  # 每半小时执行一次
+    - cron: '0,15,30,45 * * * *'  # 每半小时执行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
