@@ -20,7 +20,6 @@ jobs:
       run: |
         echo "Current Beijing time: $(date '+%Y-%m-%d-%H:%M:%S')"
         echo "time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
-        echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Download files
       env:
@@ -30,6 +29,7 @@ jobs:
         MAX_RETRIES=3
         UPDATED_FILES=""
         for link in "${LINKS[@]}"; do
+          # 从链接中提取文件名，去掉查询字符串部分
           filename=$(basename "$link" | cut -d '?' -f 1)
           echo "Downloading $filename"
           
@@ -74,13 +74,11 @@ jobs:
           [ -z "$ADDED_LINES" ] && ADDED_LINES=0
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
-          # 只添加有变更的文件
-          if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES\nFile: $file\nLines Added: $ADDED_LINES, Lines Deleted: $DELETED_LINES"
-            TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
-            TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
-            FILE_COUNT=$((FILE_COUNT + 1))
-          fi
+          LOG_ENTRIES="$LOG_ENTRIES\nFile: $file\nLines Added: $ADDED_LINES, Lines Deleted: $DELETED_LINES\n"
+
+          TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
+          TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
+          FILE_COUNT=$((FILE_COUNT + 1))
         done
 
         echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
@@ -91,7 +89,7 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Update Time: ${{ env.time }}%0ATotal Files Updated: ${{ env.file_count }}%0ALines Added: ${{ env.total_added }}%0ALines Deleted: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
+        NEW_LOG_ENTRY="Update Time: ${{ env.time }}\nTotal Files Updated: ${{ env.file_count }}\nTotal Lines Added: ${{ env.total_added }}, Total Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
         
         # 检查日志文件是否存在，如果存在，则插入到文件头部
         if [ -f "$LOG_FILE" ]; then
@@ -101,28 +99,6 @@ jobs:
         fi
         
         cat "$LOG_FILE"
-
-    - name: Push to Telegram
-      env:
-        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        LOG_FILE="update_log.txt"
-        if [ -f "$LOG_FILE" ]; then
-          # Read the log file content
-          message=$(cat "$LOG_FILE")
-          
-          # Encode message for URL
-          encoded_message=$(echo "$message" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g')
-          
-          # Send the message to Telegram
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
-          -d chat_id=${CHAT_ID} \
-          -d text="${encoded_message}" \
-          -d parse_mode="HTML"
-        else
-          echo "Log file not found!"
-        fi
 
     - name: Commit changes
       run: |
