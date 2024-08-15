@@ -1,3 +1,5 @@
+name: Download and Publish Workflow
+
 on:
   workflow_dispatch:  # 允许手动触发
 
@@ -117,15 +119,15 @@ jobs:
         fi
 
         # Prepare the message
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY=" ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
-        # URL encode the message
-        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
+        # Use sed to handle line breaks and special characters
+        turlmessage=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0a/g' -e 's/&/%26/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
           -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-          -d text="$ENCODED_NEW_LOG_ENTRY" \
+          -d text="$turlmessage" \
           -d parse_mode=HTML
 
     - name: Commit changes
