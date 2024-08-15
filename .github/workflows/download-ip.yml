@@ -84,11 +84,10 @@ jobs:
         LOG_FILE="update_log.txt"
         TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n"
         NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
-
+        
         # Create the log file if it does not exist
         touch "$LOG_FILE"
-
-        # Update the log file
+        
         if grep -q "^Today: ${{ env.date }} " "$LOG_FILE"; then
           # Update today's log entry if it exists
           TODAY_ENTRY=$(grep -E "^Today: ${{ env.date }} " "$LOG_FILE")
@@ -112,20 +111,6 @@ jobs:
         sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
 
         cat "$LOG_FILE"
-
-    - name: Send Telegram Notification
-      env:
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        # Create a Telegram message
-        MESSAGE="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}%0A%0AThis Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}%0A---"
-        
-        # URL encode the message
-        ENCODED_MESSAGE=$(echo $MESSAGE | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g')
-
-        # Send the message via Telegram API
-        curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -d chat_id=${TELEGRAM_CHAT_ID} -d text="${ENCODED_MESSAGE}" -d parse_mode="HTML"
 
     - name: Commit changes
       run: |
