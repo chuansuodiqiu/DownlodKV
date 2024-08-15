@@ -76,7 +76,7 @@ jobs:
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES$file | Add: $ADDED_LINES | Del: $DELETED_LINES\n%0A"
+            LOG_ENTRIES="$LOG_ENTRIES$file | Add: $ADDED_LINES | Del: $DELETED_LINES | \n%0A"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
             TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
             FILE_COUNT=$((FILE_COUNT + 1))
@@ -91,7 +91,7 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n%0A${{ env.log_entries }}\n%0A"
+        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }} | \n%0A${{ env.log_entries }} | \n%0A"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
@@ -117,7 +117,7 @@ jobs:
         fi
 
         # Prepare the message
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n%0A${{ env.log_entries }}\n%0A"
+        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }} | \n%0A${{ env.log_entries }} | \n%0A"
 
         # URL encode the message, replacing \n with %0A
         ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
