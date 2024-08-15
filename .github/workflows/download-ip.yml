@@ -119,11 +119,11 @@ jobs:
         # Prepare the message
         NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
-        # URL encode the message, replacing \n with %0A
-        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
+        # Convert newline characters to %0A
+        ENCODED_NEW_LOG_ENTRY=$(printf "%s" "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
 
         # Escape any additional characters that might need escaping
-        ENCODED_NEW_LOG_ENTRY=$(echo "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g' | sed 's/?/%3F/g' | sed 's/=/ %3D/g' | sed 's/ /%20/g')
+        ENCODED_NEW_LOG_ENTRY=$(printf "%s" "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g' | sed 's/?/%3F/g' | sed 's/=/ %3D/g' | sed 's/ /%20/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
