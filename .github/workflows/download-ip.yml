@@ -93,18 +93,17 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
           TEMP_LOG_FILE=$(mktemp)
           grep -v "^今天: ${{ env.date }} " "$LOG_FILE" > "$TEMP_LOG_FILE"
-          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
+          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
           cat "$TEMP_LOG_FILE" >> "$LOG_FILE"
           rm "$TEMP_LOG_FILE"
         else
-          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
+          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
         fi
         
         cat "$LOG_FILE"
@@ -119,11 +118,10 @@ jobs:
           exit 0
         fi
 
-        TODAY_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
         # URL encode the message
-        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY\n\n$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/=/ %3D/g')
+        MESSAGE=$(echo -n "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/=/ %3D/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
