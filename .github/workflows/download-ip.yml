@@ -123,7 +123,7 @@ jobs:
         CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
         MESSAGE="更新完成：
 总计今天：${{ env.date }} | 更新文件数：${{ env.file_count }} | 新增行数：${{ env.total_added }} | 删除行数：${{ env.total_deleted }}
-本次更新时间：$${{ env.time }} | 更新文件数：${{ env.file_count }} | 新增行数：${{ env.total_added }} | 删除行数：${{ env.total_deleted }}
+本次更新时间：${{ env.time }} | 更新文件数：${{ env.file_count }} | 新增行数：${{ env.total_added }} | 删除行数：${{ env.total_deleted }}
 ${{ env.log_entries }}"
         
         # 使用 urlencode 对特殊字符进行编码
