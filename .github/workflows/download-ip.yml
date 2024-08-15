@@ -84,32 +84,48 @@ jobs:
         LOG_FILE="update_log.txt"
         TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n"
         NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
-        
-        if [ -f "$LOG_FILE" ]; then
-          TODAY_ENTRY=$(grep -E "^Today: ${date} " "$LOG_FILE")
+
+        # Create the log file if it does not exist
+        touch "$LOG_FILE"
+
+        # Update the log file
+        if grep -q "^Today: ${{ env.date }} " "$LOG_FILE"; then
+          # Update today's log entry if it exists
+          TODAY_ENTRY=$(grep -E "^Today: ${{ env.date }} " "$LOG_FILE")
           
-          if [ -z "$TODAY_ENTRY" ]; then
-            sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
-          else:
-            TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $3}')
-            TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $3}')
-            TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $3}')
-            
-            TODAY_TOTAL_ADDED=$((TODAY_TOTAL_ADDED + ${{ env.total_added }}))
-            TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
-            TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
-            
-            UPDATED_TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: $TODAY_FILE_COUNT | Lines Added: $TODAY_TOTAL_ADDED | Lines Deleted: $TODAY_TOTAL_DELETED"
-            sed -i "s/^Today: ${date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
-          fi
-        else:
-          echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
+          TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $3}')
+          TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $3}')
+          TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $3}')
+          
+          TODAY_TOTAL_ADDED=$((TODAY_TOTAL_ADDED + ${{ env.total_added }}))
+          TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
+          TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
+          
+          UPDATED_TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: $TODAY_FILE_COUNT | Lines Added: $TODAY_TOTAL_ADDED | Lines Deleted: $TODAY_TOTAL_DELETED"
+          sed -i "s/^Today: ${{ env.date }} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
+        else
+          # Prepend today's log entry if it does not exist
+          sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
         fi
-        
+
         # Prepend the new log entry to the file
         sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
 
         cat "$LOG_FILE"
+
+    - name: Send Telegram Notification
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        # Create a Telegram message
+        MESSAGE="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}%0A%0AThis Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}%0A---"
+        
+        # URL encode the message
+        ENCODED_MESSAGE=$(echo $MESSAGE | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g')
+
+        # Send the message via Telegram API
+        curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -d chat_id=${TELEGRAM_CHAT_ID} -d text="${ENCODED_MESSAGE}" -d parse_mode="HTML"
 
     - name: Commit changes
       run: |
