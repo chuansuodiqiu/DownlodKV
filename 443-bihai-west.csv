@@ -13,5 +13,3 @@ IP地址,端口,TLS,域名后缀,数据中心,08-15-06:42:01,城市,网络延迟
 99.83.209.185,443,true,US,IAD,North America,Ashburn,180,6.7
 154.218.15.12,443,true,US,SJC,North America,San Jose,178,6.6
 75.2.32.4,443,true,US,IAD,North America,Ashburn,186,6.6
-91.149.239.72,443,true,US,LAX,North America,Los Angeles,195,6.1
-206.238.236.26,443,true,US,SJC,North America,San Jose,177,6.0
