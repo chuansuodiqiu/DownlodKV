@@ -1,9 +1,12 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-15-22:36:18,城市,网络延迟(ms),下载速度(MB/s)
-38.59.242.131,443,true,US,SJC,North America,San Jose,156,7.4
-154.17.224.138,443,true,US,LAX,North America,Los Angeles,162,7.1
-104.245.12.55,443,true,US,SJC,North America,San Jose,157,6.8
-172.93.32.240,443,true,CA,YVR,North America,Vancouver,177,6.6
-38.85.247.43,443,true,US,LAX,North America,Los Angeles,167,6.3
-38.47.117.77,443,true,US,LAX,North America,Los Angeles,191,5.8
-91.149.239.72,443,true,US,LAX,North America,Los Angeles,229,5.7
-206.237.117.14,443,true,US,LAX,North America,Los Angeles,191,5.4
+IP地址,端口,TLS,域名后缀,数据中心,08-16-00:36:59,城市,网络延迟(ms),下载速度(MB/s)
+38.59.242.131,443,true,US,SJC,North America,San Jose,156,7.9
+154.12.53.196,443,true,US,LAX,North America,Los Angeles,173,7.4
+104.245.12.55,443,true,US,SJC,North America,San Jose,157,7.3
+154.17.228.214,443,true,US,LAX,North America,Los Angeles,161,6.9
+154.17.224.138,443,true,US,LAX,North America,Los Angeles,173,6.5
+172.93.32.240,443,true,CA,YVR,North America,Vancouver,180,6.2
+91.149.239.72,443,true,US,LAX,North America,Los Angeles,198,5.9
+147.182.193.32,443,true,US,SJC,North America,San Jose,197,5.6
+206.237.117.14,443,true,US,LAX,North America,Los Angeles,187,5.5
+38.47.117.77,443,true,US,LAX,North America,Los Angeles,190,5.0
+38.85.247.43,443,true,US,LAX,North America,Los Angeles,162,4.9
