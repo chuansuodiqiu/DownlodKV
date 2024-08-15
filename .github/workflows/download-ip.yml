@@ -119,16 +119,13 @@ jobs:
         fi
 
         # Prepare the message
-        NEW_LOG_ENTRY=" ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
-        # Use sed to handle line breaks and special characters
-        turlmessage=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0a/g' -e 's/&/%26/g')
-
-        # Send the message via Telegram API
+        # Send the message via Telegram API with proper URL encoding
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
-          -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-          -d text="$turlmessage" \
-          -d parse_mode=HTML
+          --data-urlencode "chat_id=${{ env.TELEGRAM_CHAT_ID }}" \
+          --data-urlencode "text=$NEW_LOG_ENTRY" \
+          -d "parse_mode=HTML"
 
     - name: Commit changes
       run: |
