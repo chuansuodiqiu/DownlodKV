@@ -67,7 +67,7 @@ jobs:
           DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES\n$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES"
+            LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\r\n"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
             TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
             FILE_COUNT=$((FILE_COUNT + 1))
@@ -83,10 +83,10 @@ jobs:
       run: |
         LOG_FILE="update_log.txt"
         TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\r\n${{ env.log_entries }}\r\n---"
 
         # Create or initialize the log file
-        echo -e "$TODAY_LOG_ENTRY\n\n$NEW_LOG_ENTRY" > "$LOG_FILE"
+        echo -e "$TODAY_LOG_ENTRY\r\n\r\n$NEW_LOG_ENTRY" > "$LOG_FILE"
 
         cat "$LOG_FILE"
 
@@ -105,10 +105,10 @@ jobs:
       run: |
         # Build the message
         TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\r\n${{ env.log_entries }}\r\n---"
         
         # Use Markdown formatting to handle new lines
-        MESSAGE="${TODAY_LOG_ENTRY}\n\n${NEW_LOG_ENTRY}"
+        MESSAGE="${TODAY_LOG_ENTRY}\r\n\r\n${NEW_LOG_ENTRY}"
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
