@@ -84,19 +84,13 @@ jobs:
         LOG_FILE="update_log.txt"
         TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
-
-        # Create or initialize the log file
-        echo -e "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" > "$LOG_FILE"
-
+        
+        # Create or update log file
+        echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
+        echo -e "$NEW_LOG_ENTRY" >> "$LOG_FILE"
+        
+        # Output log file for debugging
         cat "$LOG_FILE"
-
-    - name: Commit changes
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add .
-        git commit -m "Update files - $(date '+%Y-%m-%d-%H:%M:%S')"
-        git push
 
     - name: Send Notification to Telegram
       env:
@@ -108,7 +102,7 @@ jobs:
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
         
         # URL encode the message
-        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g')
+        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g' -e 's/"/%22/g' -e 's/\//%2F/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
