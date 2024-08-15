@@ -78,7 +78,7 @@ jobs:
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\n"
+            LOG_ENTRIES="$LOG_ENTRIES$file | 新增行: $ADDED_LINES | 删除行: $DELETED_LINES\n"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
             TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
             FILE_COUNT=$((FILE_COUNT + 1))
@@ -123,7 +123,10 @@ jobs:
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
         # URL encode the message
-        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY\n\n$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/=/ %3D/g')
+        ENCODED_TODAY_LOG_ENTRY=$(echo "$TODAY_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
+        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
+
+        MESSAGE="$ENCODED_TODAY_LOG_ENTRY%0A%0A$ENCODED_NEW_LOG_ENTRY"
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
