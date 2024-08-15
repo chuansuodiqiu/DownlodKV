@@ -125,7 +125,7 @@ jobs:
         # URL encode the message
         ENCODED_TODAY_LOG_ENTRY=$(echo "$TODAY_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
         ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
-
+        
         # Combine the encoded parts
         MESSAGE="$ENCODED_TODAY_LOG_ENTRY%0A%0A$ENCODED_NEW_LOG_ENTRY"
 
