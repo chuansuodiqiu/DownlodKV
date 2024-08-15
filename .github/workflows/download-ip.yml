@@ -67,7 +67,6 @@ jobs:
         FILE_COUNT=0
 
         for file in ${{ env.updated_files }}; do
-          # Check if file is modified
           if git diff --cached --quiet "$file"; then
             continue
           fi
@@ -78,7 +77,6 @@ jobs:
           [ -z "$ADDED_LINES" ] && ADDED_LINES=0
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
-          # Only add file to log if it has changes
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
             LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\n"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
@@ -87,7 +85,6 @@ jobs:
           fi
         done
 
-        # Store the results in environment variables only if there are changes
         if [ "$FILE_COUNT" -ne 0 ]; then
           echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
           echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
@@ -107,7 +104,6 @@ jobs:
         TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
-        # Create or update log file
         if [ -f "$LOG_FILE" ]; then
           if grep -q "^今天: ${{ env.date }} " "$LOG_FILE"; then
             sed -i "s/^今天: ${{ env.date }} .*/$TOTAL_LOG_ENTRY/" "$LOG_FILE"
@@ -131,7 +127,6 @@ jobs:
           exit 0
         fi
 
-        # Build the message
         TODAY_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
 
