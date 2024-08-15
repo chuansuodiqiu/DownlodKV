@@ -67,65 +67,42 @@ jobs:
         FILE_COUNT=0
 
         for file in ${{ env.updated_files }}; do
+          # Check if file is modified
+          if git diff --cached --quiet "$file"; then
+            continue
+          fi
+
           ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
           DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
           [ -z "$ADDED_LINES" ] && ADDED_LINES=0
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
-          LOG_ENTRIES="$LOG_ENTRIES\n$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES"
-          TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
-          TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
-          FILE_COUNT=$((FILE_COUNT + 1))
+          # Only add file to log if it has changes
+          if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
+            LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\n"
+            TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
+            TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
+            FILE_COUNT=$((FILE_COUNT + 1))
+          fi
         done
 
-        echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
-        echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
-        echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
-        echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
+        # Store the results in environment variables only if there are changes
+        if [ "$FILE_COUNT" -ne 0 ]; then
+          echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
+          echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
+          echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
+          echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
+        else
+          echo "No files changed."
+          echo "log_entries=" >> $GITHUB_ENV
+          echo "total_added=0" >> $GITHUB_ENV
+          echo "total_deleted=0" >> $GITHUB_ENV
+          echo "file_count=0" >> $GITHUB_ENV
+        fi
 
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
         TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
-
-        # Create or update log file
-        if [ -f "$LOG_FILE" ]; then
-          if grep -q "^今天: ${{ env.date }} " "$LOG_FILE"; then
-            sed -i "s/^今天: ${{ env.date }} .*/$TOTAL_LOG_ENTRY/" "$LOG_FILE"
-          else
-            sed -i "1i$TOTAL_LOG_ENTRY" "$LOG_FILE"
-          fi
-          sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
-        else
-          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
-        fi
-        
-        cat "$LOG_FILE"
-
-    - name: Send Notification to Telegram
-      env:
-        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        # Build the message
-        TODAY_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
-        
-        # URL encode the message
-        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g')
-
-        # Send the message via Telegram API
-        curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
-          -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-          -d text="$MESSAGE" \
-          -d parse_mode=HTML
-
-    - name: Commit changes
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
-        git add .
-        git commit -m "Update files - $(date '+%Y-%m-%d-%H:%M:%S')"
-        git push
+        NEW_LOG_ENTRY="本次: ${{ env.time 
