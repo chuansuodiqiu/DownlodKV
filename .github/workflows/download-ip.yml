@@ -67,22 +67,16 @@ jobs:
         FILE_COUNT=0
 
         for file in ${{ env.updated_files }}; do
-          if git diff --quiet "$file"; then
-            continue
-          fi
-
-          ADDED_LINES=$(git diff --numstat "$file" | awk '{added += $1} END {print added}')
-          DELETED_LINES=$(git diff --numstat "$file" | awk '{deleted += $2} END {print deleted}')
+          ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
+          DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
           [ -z "$ADDED_LINES" ] && ADDED_LINES=0
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
-          if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\n"
-            TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
-            TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
-            FILE_COUNT=$((FILE_COUNT + 1))
-          fi
+          LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\n"
+          TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
+          TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
+          FILE_COUNT=$((FILE_COUNT + 1))
         done
 
         echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
@@ -94,15 +88,16 @@ jobs:
       run: |
         LOG_FILE="update_log.txt"
         TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
+        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
-          TEMP_LOG_FILE=$(mktemp)
-          grep -v "^今天: ${{ env.date }} " "$LOG_FILE" > "$TEMP_LOG_FILE"
-          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
-          cat "$TEMP_LOG_FILE" >> "$LOG_FILE"
-          rm "$TEMP_LOG_FILE"
+          if grep -q "^今天: ${{ env.date }} " "$LOG_FILE"; then
+            sed -i "s/^今天: ${{ env.date }} .*/$TOTAL_LOG_ENTRY/" "$LOG_FILE"
+          else
+            sed -i "1i$TOTAL_LOG_ENTRY" "$LOG_FILE"
+          fi
+          sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
         else
           echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
         fi
@@ -114,11 +109,7 @@ jobs:
         TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        if [ "${{ env.file_count }}" -eq 0 ]; then
-          echo "No files changed. Skipping Telegram notification."
-          exit 0
-        fi
-
+        # Build the message
         TODAY_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
 
