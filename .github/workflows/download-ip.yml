@@ -99,7 +99,7 @@ jobs:
         fi
 
         # 准备消息
-        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}"
+        NEW_LOG_ENTRY="${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}"
 
         # 对消息进行URL编码，替换 \n 为 %0A
         ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
