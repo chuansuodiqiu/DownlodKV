@@ -20,7 +20,6 @@ jobs:
       run: |
         echo "Current Beijing time: $(date '+%Y-%m-%d-%H:%M:%S')"
         echo "time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
-        echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Download files
       env:
@@ -62,10 +61,7 @@ jobs:
       id: file_stats
       run: |
         LOG_ENTRIES=""
-        TOTAL_ADDED=0
-        TOTAL_DELETED=0
-        FILE_COUNT=0
-
+        
         for file in ${{ env.updated_files }}; do
           if git diff --quiet "$file"; then
             continue
@@ -79,55 +75,31 @@ jobs:
           
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
             LOG_ENTRIES="$LOG_ENTRIES$file | Add: $ADDED_LINES | Del: $DELETED_LINES\n"
-            TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
-            TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
-            FILE_COUNT=$((FILE_COUNT + 1))
           fi
         done
 
         echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
-        echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
-        echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
-        echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
-
-    - name: Update Log File
-      run: |
-        LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
-
-        # Create or update log file
-        if [ -f "$LOG_FILE" ]; then
-          TEMP_LOG_FILE=$(mktemp)
-          grep -v "^今天: ${{ env.date }} " "$LOG_FILE" > "$TEMP_LOG_FILE"
-          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
-          cat "$TEMP_LOG_FILE" >> "$LOG_FILE"
-          rm "$TEMP_LOG_FILE"
-        else
-          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
-        fi
-        
-        cat "$LOG_FILE"
 
     - name: Send Notification to Telegram
       env:
         TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        if [ "${{ env.file_count }}" -eq 0 ]; then
+        if [ -z "${{ env.log_entries }}" ]; then
           echo "No files changed. Skipping Telegram notification."
           exit 0
         fi
 
         # Prepare the message
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="${{ env.log_entries }}"
 
-        # Handle special characters and line breaks for Telegram
-        turlmessage=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
+        # URL encode the message
+        MESSAGE=$(echo -n "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
           -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-          -d text="$turlmessage" \
+          -d text="$MESSAGE" \
           -d parse_mode=HTML
 
     - name: Commit changes
