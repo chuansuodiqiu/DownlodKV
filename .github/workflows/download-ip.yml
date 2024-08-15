@@ -67,12 +67,12 @@ jobs:
         FILE_COUNT=0
 
         for file in ${{ env.updated_files }}; do
-          if git diff --cached --quiet "$file"; then
+          if git diff --quiet "$file"; then
             continue
           fi
 
-          ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
-          DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
+          ADDED_LINES=$(git diff --numstat "$file" | awk '{added += $1} END {print added}')
+          DELETED_LINES=$(git diff --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
           [ -z "$ADDED_LINES" ] && ADDED_LINES=0
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
@@ -85,32 +85,24 @@ jobs:
           fi
         done
 
-        if [ "$FILE_COUNT" -ne 0 ]; then
-          echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
-          echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
-          echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
-          echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
-        else
-          echo "No files changed."
-          echo "log_entries=" >> $GITHUB_ENV
-          echo "total_added=0" >> $GITHUB_ENV
-          echo "total_deleted=0" >> $GITHUB_ENV
-          echo "file_count=0" >> $GITHUB_ENV
-        fi
+        echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
+        echo "total_added=$TOTAL_ADDED" >> $GITHUB_ENV
+        echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
+        echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
 
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
         TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
 
+        # Create or update log file
         if [ -f "$LOG_FILE" ]; then
-          if grep -q "^今天: ${{ env.date }} " "$LOG_FILE"; then
-            sed -i "s/^今天: ${{ env.date }} .*/$TOTAL_LOG_ENTRY/" "$LOG_FILE"
-          else
-            sed -i "1i$TOTAL_LOG_ENTRY" "$LOG_FILE"
-          fi
-          sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
+          TEMP_LOG_FILE=$(mktemp)
+          grep -v "^今天: ${{ env.date }} " "$LOG_FILE" > "$TEMP_LOG_FILE"
+          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
+          cat "$TEMP_LOG_FILE" >> "$LOG_FILE"
+          rm "$TEMP_LOG_FILE"
         else
           echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
         fi
