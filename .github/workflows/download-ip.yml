@@ -121,8 +121,8 @@ jobs:
         # Prepare the message
         NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
-        # Use sed to handle line breaks and special characters
-        turlmessage=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g')
+        # Handle special characters and line breaks for Telegram
+        turlmessage=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
