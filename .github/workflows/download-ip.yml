@@ -87,34 +87,21 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        TOTAL_LOG_ENTRY="Total Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n"
+        TOTAL_LOG_ENTRY="Total Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="Update Time: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
 
-        # Create the log file if it does not exist
-        touch "$LOG_FILE"
-        
-        if grep -q "^Total Today: ${{ env.date }} " "$LOG_FILE"; then
-          # Update today's log entry if it exists
-          TODAY_ENTRY=$(grep -E "^Total Today: ${{ env.date }} " "$LOG_FILE")
-          
-          TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $3}')
-          TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $3}')
-          TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $3}')
-          
-          TODAY_TOTAL_ADDED=$((TODAY_TOTAL_ADDED + ${{ env.total_added }}))
-          TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
-          TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
-          
-          UPDATED_TODAY_LOG_ENTRY="Total Today: ${{ env.date }} | Files Updated: $TODAY_FILE_COUNT | Lines Added: $TODAY_TOTAL_ADDED | Lines Deleted: $TODAY_TOTAL_DELETED"
-          sed -i "s/^Total Today: ${{ env.date }} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
+        # Create or update log file
+        if [ -f "$LOG_FILE" ]; then
+          if grep -q "^Total Today: ${{ env.date }} " "$LOG_FILE"; then
+            sed -i "s/^Total Today: ${{ env.date }} .*/$TOTAL_LOG_ENTRY/" "$LOG_FILE"
+          else
+            sed -i "1i$TOTAL_LOG_ENTRY" "$LOG_FILE"
+          fi
+          sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
         else
-          # Prepend today's log entry if it does not exist
-          sed -i "1i$TOTAL_LOG_ENTRY" "$LOG_FILE"
+          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
         fi
-
-        # Prepend the new log entry to the file
-        sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
-
+        
         cat "$LOG_FILE"
 
     - name: Send Telegram Notification
@@ -126,8 +113,8 @@ jobs:
 本次更新时间：${{ env.time }} | 更新文件数：${{ env.file_count }} | 新增行数：${{ env.total_added }} | 删除行数：${{ env.total_deleted }}
 ${{ env.log_entries }}"
         
-        # 使用 urlencode 对特殊字符进行编码
-        ENCODED_MESSAGE=$(echo "$MESSAGE" | jq -sRr @uri)
+        # Encode message to handle special characters and line breaks
+        ENCODED_MESSAGE=$(echo -e "$MESSAGE" | jq -sRr @uri)
         curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage" \
              -d "chat_id=$CHAT_ID" \
              -d "text=$ENCODED_MESSAGE" \
