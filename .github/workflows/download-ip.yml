@@ -1,7 +1,7 @@
 name: Download and Publish Files
 
 on:
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   download_and_publish:
@@ -12,14 +12,11 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set timezone to Beijing
-      run: |
-        sudo timedatectl set-timezone Asia/Shanghai
-
-    - name: Log current datetime in Beijing timezone
       id: beijing_time
       run: |
-        echo "Current Beijing time: $(date '+%Y-%m-%d-%H:%M:%S')"
+        sudo timedatectl set-timezone Asia/Shanghai
         echo "time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+        echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Download files
       env:
@@ -29,7 +26,6 @@ jobs:
         MAX_RETRIES=3
         UPDATED_FILES=""
         for link in "${LINKS[@]}"; do
-          # 从链接中提取文件名，去掉查询字符串部分
           filename=$(basename "$link" | cut -d '?' -f 1)
           echo "Downloading $filename"
           
@@ -70,15 +66,12 @@ jobs:
           ADDED_LINES=$(git diff --cached --numstat "$file" | awk '{added += $1} END {print added}')
           DELETED_LINES=$(git diff --cached --numstat "$file" | awk '{deleted += $2} END {print deleted}')
 
-          # 如果没有新增或删除行，设置为0
-          [ -z "$ADDED_LINES" ] && ADDED_LINES=0
-          [ -z "$DELETED_LINES" ] && DELETED_LINES=0
-          
-          LOG_ENTRIES="$LOG_ENTRIES\nFile: $file\nLines Added: $ADDED_LINES, Lines Deleted: $DELETED_LINES\n"
-
-          TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
-          TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
-          FILE_COUNT=$((FILE_COUNT + 1))
+          if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
+            LOG_ENTRIES="$LOG_ENTRIES\n$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES"
+            TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
+            TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
+            FILE_COUNT=$((FILE_COUNT + 1))
+          fi
         done
 
         echo "log_entries=$LOG_ENTRIES" >> $GITHUB_ENV
@@ -89,15 +82,33 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Update Time: ${{ env.time }}\nTotal Files Updated: ${{ env.file_count }}\nTotal Lines Added: ${{ env.total_added }}, Total Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
+        TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n"
+        NEW_LOG_ENTRY="This Run: ${{ env.time }} | Files Updated: ${{ env.file_count }} | Lines Added: ${{ env.total_added }} | Lines Deleted: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---\n"
         
-        # 检查日志文件是否存在，如果存在，则插入到文件头部
         if [ -f "$LOG_FILE" ]; then
-          (echo -e "$NEW_LOG_ENTRY" && cat "$LOG_FILE") > tmpfile && mv tmpfile "$LOG_FILE"
-        else
-          echo -e "$NEW_LOG_ENTRY" > "$LOG_FILE"
+          TODAY_ENTRY=$(grep -E "^Today: ${date} " "$LOG_FILE")
+          
+          if [ -z "$TODAY_ENTRY" ]; then
+            sed -i "1i$TODAY_LOG_ENTRY" "$LOG_FILE"
+          else:
+            TODAY_TOTAL_ADDED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $3}' | awk '{print $3}')
+            TODAY_TOTAL_DELETED=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $4}' | awk '{print $3}')
+            TODAY_FILE_COUNT=$(echo "$TODAY_ENTRY" | awk -F'|' '{print $2}' | awk '{print $3}')
+            
+            TODAY_TOTAL_ADDED=$((TODAY_TOTAL_ADDED + ${{ env.total_added }}))
+            TODAY_TOTAL_DELETED=$((TODAY_TOTAL_DELETED + ${{ env.total_deleted }}))
+            TODAY_FILE_COUNT=$((TODAY_FILE_COUNT + ${{ env.file_count }}))
+            
+            UPDATED_TODAY_LOG_ENTRY="Today: ${{ env.date }} | Files Updated: $TODAY_FILE_COUNT | Lines Added: $TODAY_TOTAL_ADDED | Lines Deleted: $TODAY_TOTAL_DELETED"
+            sed -i "s/^Today: ${date} .*$/$UPDATED_TODAY_LOG_ENTRY/" "$LOG_FILE"
+          fi
+        else:
+          echo -e "$TODAY_LOG_ENTRY" > "$LOG_FILE"
         fi
         
+        # Prepend the new log entry to the file
+        sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
+
         cat "$LOG_FILE"
 
     - name: Commit changes
