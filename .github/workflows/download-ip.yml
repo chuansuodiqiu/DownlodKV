@@ -102,10 +102,7 @@ jobs:
         NEW_LOG_ENTRY="${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}"
 
         # 对消息进行URL编码，替换 \n 为 %0A
-        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | tr -d '\n' | sed ':a;N;$!ba;s/\n/%0A/g')
-
-        # 进一步编码任何需要的字符
-        # ENCODED_NEW_LOG_ENTRY=$(echo "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g' | sed 's/?/%3F/g' | sed 's/=/ %3D/g' | sed 's/ /%20/g')
+        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
 
         # 通过Telegram API发送消息
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
@@ -117,9 +114,6 @@ jobs:
       run: |
         LOG_FILE="update_log.txt"
         NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n\n${{ env.log_entries }}\n------"
-        
-        # 对消息进行URL编码，替换 \n 为 %0A
-        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | tr -d '%0A' | sed ':a;N;$!ba;s/\n/%0A/g')
 
         # 创建或更新日志文件
         if [ -f "$LOG_FILE" ]; then
