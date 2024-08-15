@@ -73,7 +73,7 @@ jobs:
           [ -z "$ADDED_LINES" ] && ADDED_LINES=0
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
-          LOG_ENTRIES="$LOG_ENTRIES$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES\n"
+          LOG_ENTRIES="$LOG_ENTRIES\n$file | Lines Added: $ADDED_LINES | Lines Deleted: $DELETED_LINES"
           TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
           TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
           FILE_COUNT=$((FILE_COUNT + 1))
@@ -88,7 +88,7 @@ jobs:
       run: |
         LOG_FILE="update_log.txt"
         TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
@@ -112,9 +112,9 @@ jobs:
         # Build the message
         TODAY_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
         NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
-
+        
         # URL encode the message
-        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/=/ %3D/g')
+        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
