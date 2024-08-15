@@ -95,7 +95,7 @@ jobs:
         NEW_LOG_ENTRY="$LOG_ENTRIES"
 
         # URL encode the message
-        MESSAGE=$(echo -n "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
+        MESSAGE=$(echo -n "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
