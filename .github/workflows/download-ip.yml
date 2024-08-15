@@ -105,4 +105,49 @@ jobs:
       run: |
         LOG_FILE="update_log.txt"
         TOTAL_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
-        NEW_LOG_ENTRY="本次: ${{ env.time 
+        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+
+        # Create or update log file
+        if [ -f "$LOG_FILE" ]; then
+          if grep -q "^今天: ${{ env.date }} " "$LOG_FILE"; then
+            sed -i "s/^今天: ${{ env.date }} .*/$TOTAL_LOG_ENTRY/" "$LOG_FILE"
+          else
+            sed -i "1i$TOTAL_LOG_ENTRY" "$LOG_FILE"
+          fi
+          sed -i "2i$NEW_LOG_ENTRY" "$LOG_FILE"
+        else
+          echo -e "$TOTAL_LOG_ENTRY\n$NEW_LOG_ENTRY" > "$LOG_FILE"
+        fi
+        
+        cat "$LOG_FILE"
+
+    - name: Send Notification to Telegram
+      env:
+        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        if [ "${{ env.file_count }}" -eq 0 ]; then
+          echo "No files changed. Skipping Telegram notification."
+          exit 0
+        fi
+
+        # Build the message
+        TODAY_LOG_ENTRY="今天: ${{ env.date }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}"
+        NEW_LOG_ENTRY="本次: ${{ env.time }} | 更新文件: ${{ env.file_count }} | 新增行: ${{ env.total_added }} | 删除行: ${{ env.total_deleted }}%0A${{ env.log_entries }}%0A---"
+
+        # URL encode the message
+        MESSAGE=$(echo -n "$TODAY_LOG_ENTRY%0A%0A$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/=/ %3D/g')
+
+        # Send the message via Telegram API
+        curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
+          -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
+          -d text="$MESSAGE" \
+          -d parse_mode=HTML
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add .
+        git commit -m "Update files - $(date '+%Y-%m-%d-%H:%M:%S')"
+        git push
