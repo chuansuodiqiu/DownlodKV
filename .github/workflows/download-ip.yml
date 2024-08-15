@@ -119,7 +119,7 @@ jobs:
         # Prepare the message
         NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
 
-        # URL encode the message
+        # URL encode the message, replacing \n with %0a
         ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed -e ':a;N;$!ba;s/\n/%0A/g' -e 's/&/%26/g' -e 's/?/%3F/g' -e 's/=/ %3D/g' -e 's/ /%20/g')
 
         # Send the message via Telegram API
