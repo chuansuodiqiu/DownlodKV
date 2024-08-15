@@ -1,2 +1,11 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-16-01:39:03,城市,网络延迟(ms),下载速度(MB/s)
-54.74.253.197,2083,true,IE,DUB,Europe,Dublin,259,5.8
+IP地址,端口,TLS,域名后缀,数据中心,08-16-03:45:14,城市,网络延迟(ms),下载速度(MB/s)
+206.238.236.219,2083,true,US,SJC,North America,San Jose,196,7.6
+45.205.0.234,2083,true,US,SJC,North America,San Jose,195,7.4
+45.205.0.22,2083,true,US,SJC,North America,San Jose,192,7.4
+44.36.18.251,2083,true,US,SJC,North America,San Jose,195,7.4
+156.238.18.0,2083,true,US,SJC,North America,San Jose,187,7.1
+154.218.15.104,2083,true,US,SJC,North America,San Jose,188,7.0
+154.218.15.85,2083,true,US,SJC,North America,San Jose,188,7.0
+156.238.18.118,2083,true,US,SJC,North America,San Jose,194,6.7
+206.238.237.59,2083,true,US,SJC,North America,San Jose,194,6.5
+154.218.15.78,2083,true,US,SJC,North America,San Jose,184,6.2
