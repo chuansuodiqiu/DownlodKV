@@ -1,18 +1,19 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-16-03:45:14,城市,网络延迟(ms),下载速度(MB/s)
-45.205.0.222,8443,true,US,SJC,North America,San Jose,176,7.7
-206.238.236.219,8443,true,US,SJC,North America,San Jose,175,7.7
-45.205.0.46,8443,true,US,SJC,North America,San Jose,187,7.6
-154.218.15.165,8443,true,US,SJC,North America,San Jose,182,7.6
-45.205.0.201,8443,true,US,SJC,North America,San Jose,193,7.4
-206.238.237.95,8443,true,US,SJC,North America,San Jose,178,7.4
-154.218.15.109,8443,true,US,SJC,North America,San Jose,184,7.2
-45.205.0.62,8443,true,US,SJC,North America,San Jose,186,7.1
-206.238.237.103,8443,true,US,SJC,North America,San Jose,181,7.0
-45.205.0.21,8443,true,US,SJC,North America,San Jose,187,7.0
-45.205.0.76,8443,true,US,SJC,North America,San Jose,184,7.0
-154.17.229.59,8443,true,US,LAX,North America,Los Angeles,161,6.9
-206.238.236.166,8443,true,US,SJC,North America,San Jose,182,6.8
-206.238.237.125,8443,true,US,SJC,North America,San Jose,178,6.7
-206.238.237.163,8443,true,US,SJC,North America,San Jose,176,6.6
-206.238.237.200,8443,true,US,SJC,North America,San Jose,174,6.1
-51.44.40.209,8443,true,FR,CDG,Europe,Paris,238,6.1
+IP地址,端口,TLS,域名后缀,数据中心,08-16-05:45:24,城市,网络延迟(ms),下载速度(MB/s)
+154.218.15.165,8443,true,US,SJC,North America,San Jose,177,7.8
+45.205.0.46,8443,true,US,SJC,North America,San Jose,176,7.7
+45.205.0.222,8443,true,US,SJC,North America,San Jose,184,7.5
+206.238.237.95,8443,true,US,SJC,North America,San Jose,174,7.5
+45.205.0.76,8443,true,US,SJC,North America,San Jose,190,7.4
+206.238.237.103,8443,true,US,SJC,North America,San Jose,178,7.3
+45.205.0.201,8443,true,US,SJC,North America,San Jose,186,7.1
+206.238.237.200,8443,true,US,SJC,North America,San Jose,177,7.1
+206.238.237.163,8443,true,US,SJC,North America,San Jose,182,7.1
+206.238.236.243,8443,true,US,SJC,North America,San Jose,179,7.0
+206.238.236.219,8443,true,US,SJC,North America,San Jose,182,6.8
+45.205.0.21,8443,true,US,SJC,North America,San Jose,175,6.7
+206.238.237.125,8443,true,US,SJC,North America,San Jose,176,6.6
+206.238.236.166,8443,true,US,SJC,North America,San Jose,177,6.6
+154.26.238.84,8443,true,US,LAX,North America,Los Angeles,171,6.4
+45.205.0.62,8443,true,US,SJC,North America,San Jose,184,6.3
+154.218.15.109,8443,true,US,SJC,North America,San Jose,184,6.2
+207.60.50.24,8443,true,US,LAX,North America,Los Angeles,168,6.1
