@@ -1,5 +1,5 @@
 on:
-  workflow_dispatch:  # Allows manual triggering 
+  workflow_dispatch:  # Allows manual触发
 
 jobs:
   download_and_publish:
@@ -88,12 +88,37 @@ jobs:
         echo "total_deleted=$TOTAL_DELETED" >> $GITHUB_ENV
         echo "file_count=$FILE_COUNT" >> $GITHUB_ENV
 
-    - name: Update Log File
+    - name: Send Notification to Telegram  # 先发送通知到Telegram
+      env:
+        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        if [ "${{ env.file_count }}" -eq 0 ]; then
+          echo "No files changed. Skipping Telegram notification."
+          exit 0
+        fi
+
+        # 准备消息
+        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}"
+
+        # 对消息进行URL编码，替换 \n 为 %0A
+        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
+
+        # 进一步编码任何需要的字符
+        ENCODED_NEW_LOG_ENTRY=$(echo "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g' | sed 's/?/%3F/g' | sed 's/=/ %3D/g' | sed 's/ /%20/g')
+
+        # 通过Telegram API发送消息
+        curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
+          -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
+          -d text="$ENCODED_NEW_LOG_ENTRY" \
+          -d parse_mode=HTML
+
+    - name: Update Log File  # 之后更新日志文件
       run: |
         LOG_FILE="update_log.txt"
         NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n\n${{ env.log_entries }}\n------"
 
-        # Create or update log file
+        # 创建或更新日志文件
         if [ -f "$LOG_FILE" ]; then
           TEMP_LOG_FILE=$(mktemp)
           grep -v "^Date: ${{ env.date }} " "$LOG_FILE" > "$TEMP_LOG_FILE"
@@ -105,31 +130,6 @@ jobs:
         fi
         
         cat "$LOG_FILE"
-
-    - name: Send Notification to Telegram
-      env:
-        TELEGRAM_API_TOKEN: ${{ secrets.TELEGRAM_API_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        if [ "${{ env.file_count }}" -eq 0 ]; then
-          echo "No files changed. Skipping Telegram notification."
-          exit 0
-        fi
-
-        # Prepare the message
-        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}"
-
-        # URL encode the message, replacing \n with %0A
-        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
-
-        # Escape any additional characters that might need escaping
-        ENCODED_NEW_LOG_ENTRY=$(echo "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g' | sed 's/?/%3F/g' | sed 's/=/ %3D/g' | sed 's/ /%20/g')
-
-        # Send the message via Telegram API
-        curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
-          -d chat_id=${{ env.TELEGRAM_CHAT_ID }} \
-          -d text="$ENCODED_NEW_LOG_ENTRY" \
-          -d parse_mode=HTML
 
     - name: Commit changes
       run: |
