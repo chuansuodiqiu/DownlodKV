@@ -91,7 +91,7 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n------"
+        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n\n${{ env.log_entries }}\n------"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
