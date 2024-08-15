@@ -91,7 +91,7 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }} | \n%0A${{ env.log_entries }} | \n%0A"
+        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n------"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
@@ -117,7 +117,7 @@ jobs:
         fi
 
         # Prepare the message
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }} | \n%0A${{ env.log_entries }} | \n%0A"
+        NEW_LOG_ENTRY="${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}"
 
         # URL encode the message, replacing \n with %0A
         ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
