@@ -76,7 +76,7 @@ jobs:
           [ -z "$DELETED_LINES" ] && DELETED_LINES=0
           
           if [ "$ADDED_LINES" -ne 0 ] || [ "$DELETED_LINES" -ne 0 ]; then
-            LOG_ENTRIES="$LOG_ENTRIES$file | Add: $ADDED_LINES | Del: $DELETED_LINES |\n"
+            LOG_ENTRIES="$LOG_ENTRIES$file | Add: $ADDED_LINES | Del: $DELETED_LINES%0A%0A"
             TOTAL_ADDED=$((TOTAL_ADDED + ADDED_LINES))
             TOTAL_DELETED=$((TOTAL_DELETED + DELETED_LINES))
             FILE_COUNT=$((FILE_COUNT + 1))
@@ -91,7 +91,7 @@ jobs:
     - name: Update Log File
       run: |
         LOG_FILE="update_log.txt"
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}%0A%0A\n${{ env.log_entries }}\n%0A%0A---"
 
         # Create or update log file
         if [ -f "$LOG_FILE" ]; then
@@ -117,13 +117,13 @@ jobs:
         fi
 
         # Prepare the message
-        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}\n${{ env.log_entries }}\n---"
+        NEW_LOG_ENTRY="Time: ${{ env.time }} | Files: ${{ env.file_count }} | Add: ${{ env.total_added }} | Del: ${{ env.total_deleted }}%0A%0A${{ env.log_entries }}%0A%0A---"
 
-        # Convert newline characters to %0A
-        ENCODED_NEW_LOG_ENTRY=$(printf "%s" "$NEW_LOG_ENTRY" | awk '{ gsub(/\n/, "%0A"); print }')
+        # URL encode the message, replacing \n with %0A
+        ENCODED_NEW_LOG_ENTRY=$(echo "$NEW_LOG_ENTRY" | sed ':a;N;$!ba;s/\n/%0A/g')
 
-        # URL encode the message
-        ENCODED_NEW_LOG_ENTRY=$(printf "%s" "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g; s/?/%3F/g; s/=/ %3D/g; s/ /%20/g')
+        # Escape any additional characters that might need escaping
+        ENCODED_NEW_LOG_ENTRY=$(echo "$ENCODED_NEW_LOG_ENTRY" | sed 's/&/%26/g' | sed 's/?/%3F/g' | sed 's/=/ %3D/g' | sed 's/ /%20/g')
 
         # Send the message via Telegram API
         curl -s -X POST "https://api.telegram.org/bot${{ env.TELEGRAM_API_TOKEN }}/sendMessage" \
