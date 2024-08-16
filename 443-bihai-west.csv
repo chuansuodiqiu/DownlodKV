@@ -1,18 +1,5 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-16-05:45:24,城市,网络延迟(ms),下载速度(MB/s)
-99.83.209.185,443,true,US,IAD,North America,Ashburn,227,7.7
-104.245.12.55,443,true,US,SJC,North America,San Jose,158,7.5
-206.238.236.71,443,true,US,SJC,North America,San Jose,186,7.4
-154.218.15.12,443,true,US,SJC,North America,San Jose,181,7.3
-206.238.237.249,443,true,US,SJC,North America,San Jose,181,7.1
-206.238.236.154,443,true,US,SJC,North America,San Jose,175,7.1
-206.238.237.254,443,true,US,SJC,North America,San Jose,179,7.1
-154.17.228.214,443,true,US,LAX,North America,Los Angeles,173,7.1
-75.2.32.4,443,true,US,IAD,North America,Ashburn,84,6.6
-206.238.236.26,443,true,US,SJC,North America,San Jose,176,6.6
-206.238.236.165,443,true,US,SJC,North America,San Jose,181,6.5
-38.85.247.43,443,true,US,LAX,North America,Los Angeles,163,6.3
-195.15.202.67,443,true,AT,VIE,Europe,Vienna,238,6.2
-91.149.239.70,443,true,US,LAX,North America,Los Angeles,198,6.2
-38.59.242.131,443,true,US,SJC,North America,San Jose,156,6.1
-206.237.117.14,443,true,US,LAX,North America,Los Angeles,183,6.1
-172.93.32.240,443,true,CA,YVR,North America,Vancouver,191,6.1
+IP地址,端口,TLS,域名后缀,数据中心,08-16-12:35:37,城市,网络延迟(ms),下载速度(MB/s)
+104.245.12.55,443,true,US,SJC,North America,San Jose,157,8.1
+38.59.242.131,443,true,US,SJC,North America,San Jose,158,6.9
+172.93.32.240,443,true,CA,YVR,North America,Vancouver,177,6.0
+38.85.247.43,443,true,US,LAX,North America,Los Angeles,171,5.7
