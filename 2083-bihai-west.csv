@@ -1,1 +1,10 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-17-03:42:33,城市,网络延迟(ms),下载速度(MB/s)
+IP地址,端口,TLS,域名后缀,数据中心,08-17-05:42:46,城市,网络延迟(ms),下载速度(MB/s)
+206.238.237.106,2083,true,US,SJC,North America,San Jose,177,10.2
+206.238.236.148,2083,true,US,SJC,North America,San Jose,178,10.2
+206.238.236.64,2083,true,US,SJC,North America,San Jose,184,10.0
+206.238.236.91,2083,true,US,SJC,North America,San Jose,176,10.0
+156.238.18.61,2083,true,US,SJC,North America,San Jose,180,9.9
+206.238.237.5,2083,true,US,SJC,North America,San Jose,187,9.7
+206.238.237.109,2083,true,US,SJC,North America,San Jose,180,9.6
+206.238.237.61,2083,true,US,SJC,North America,San Jose,185,9.3
+206.238.236.195,2083,true,US,SJC,North America,San Jose,180,8.7
