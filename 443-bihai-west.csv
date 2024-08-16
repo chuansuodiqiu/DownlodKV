@@ -1,8 +1,1 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-17-01:35:12,城市,网络延迟(ms),下载速度(MB/s)
-104.245.12.55,443,true,US,SJC,North America,San Jose,156,10.2
-38.59.242.131,443,true,US,SJC,North America,San Jose,158,6.5
-172.93.32.240,443,true,CA,YVR,North America,Vancouver,179,6.4
-18.184.55.249,443,true,DE,FRA,Europe,Frankfurt,226,5.9
-188.213.129.147,443,true,CH,GVA,Europe,Geneva,235,4.7
-38.47.117.77,443,true,US,LAX,North America,Los Angeles,183,4.2
-45.90.59.204,443,true,CH,ZRH,Europe,Zurich,234,4.2
+IP地址,端口,TLS,域名后缀,数据中心,08-17-03:42:33,城市,网络延迟(ms),下载速度(MB/s)
