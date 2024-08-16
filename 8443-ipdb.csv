@@ -1,3 +1,5 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-17-01:02:00,城市,网络延迟(ms),下载速度(MB/s)
-47.242.42.153,8443,true,HK,HKG,Asia Pacific,Hong Kong,52,13.2
-8.210.174.156,8443,true,HK,HKG,Asia Pacific,Hong Kong,39,6.6
+IP地址,端口,TLS,域名后缀,数据中心,08-17-03:10:41,城市,网络延迟(ms),下载速度(MB/s)
+47.243.139.85,8443,true,HK,HKG,Asia Pacific,Hong Kong,38,10.6
+47.243.60.150,8443,true,HK,HKG,Asia Pacific,Hong Kong,51,10.4
+8.210.119.11,8443,true,HK,HKG,Asia Pacific,Hong Kong,40,10.3
+47.242.7.162,8443,true,HK,HKG,Asia Pacific,Hong Kong,43,9.5
