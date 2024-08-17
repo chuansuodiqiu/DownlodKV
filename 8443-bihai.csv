@@ -1,4 +1,1 @@
-IP地址,端口,TLS,域名后缀,数据中心,08-18-01:11:28,城市,网络延迟(ms),下载速度(MB/s)
-185.214.103.3,8443,true,KR,ICN,Asia Pacific,Seoul,58,8.2
-147.78.244.117,8443,true,JP,NRT,Asia Pacific,Tokyo,91,4.7
-140.238.12.52,8443,true,JP,NRT,Asia Pacific,Tokyo,83,4.4
+IP地址,端口,TLS,域名后缀,数据中心,08-18-02:35:20,城市,网络延迟(ms),下载速度(MB/s)
