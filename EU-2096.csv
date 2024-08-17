@@ -1,6 +1,0 @@
-IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-66.245.194.136,2096,true,GB,MAN,Manchester,273 ms,4.5
-51.103.225.73,2096,true,IT,MXP,Milan,219 ms,4.1
-70.34.204.4,2096,true,SE,ARN,Stockholm,302 ms,3.4
-20.218.144.41,2096,true,DE,FRA,Frankfurt,260 ms,3.4
-95.179.243.80,2096,true,DE,FRA,Frankfurt,284 ms,2.7
