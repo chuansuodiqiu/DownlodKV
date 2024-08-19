@@ -1,14 +1,7 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-103.75.118.144,2053,true,JP,NRT,Tokyo,226 ms,4.0
-147.78.244.117,2053,true,JP,NRT,Tokyo,82 ms,3.1
-54.199.226.31,2053,true,JP,NRT,Tokyo,81 ms,2.7
-193.111.30.47,2053,true,JP,NRT,Tokyo,113 ms,2.4
-45.149.156.132,2053,true,JP,NRT,Tokyo,112 ms,1.1
-54.199.226.31,8443,true,JP,NRT,Tokyo,85 ms,3.3
-140.238.12.52,8443,true,JP,NRT,Tokyo,90 ms,3.2
-138.2.36.157,8443,true,JP,KIX,Osaka,199 ms,1.8
-168.138.46.67,443,true,JP,KIX,Osaka,206 ms,3.9
-46.3.100.136,443,true,JP,NRT,Tokyo,70 ms,2.4
-5.226.48.84,443,true,JP,NRT,Tokyo,87 ms,2.3
-3.112.21.102,443,true,JP,NRT,Tokyo,85 ms,2.0
-138.2.18.184,443,true,JP,NRT,Tokyo,93 ms,1.9
+147.78.244.117,2053,true,JP,NRT,Tokyo,105 ms,3.6
+45.149.156.132,2053,true,JP,NRT,Tokyo,156 ms,2.8
+193.111.30.47,2053,true,JP,NRT,Tokyo,190 ms,2.5
+46.3.100.136,443,true,JP,NRT,Tokyo,66 ms,4.4
+5.226.48.84,443,true,JP,NRT,Tokyo,79 ms,4.4
+219.111.17.202,443,true,JP,KIX,Osaka,95 ms,1.6
