@@ -1,2 +1,4 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-146.70.175.172,443,true,NL,AMS,Amsterdam,238 ms,3.0
+168.63.17.64,2053,true,NL,AMS,Amsterdam,231 ms,3.0
+146.70.175.178,443,true,NL,AMS,Amsterdam,261 ms,3.1
+146.70.169.116,443,true,NL,AMS,Amsterdam,247 ms,3.0
