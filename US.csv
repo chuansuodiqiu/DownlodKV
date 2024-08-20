@@ -1,12 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-74.48.106.135,2053,true,US,LAX,Los Angeles,196 ms,3.2
-80.251.213.234,8443,true,US,LAX,Los Angeles,174 ms,5.4
-154.17.12.26,8443,true,US,LAX,Los Angeles,187 ms,5.1
-207.60.50.14,8443,true,US,LAX,Los Angeles,173 ms,4.5
-64.64.253.120,8443,true,US,LAX,Los Angeles,174 ms,3.8
-207.60.50.24,8443,true,US,LAX,Los Angeles,173 ms,3.7
-38.59.242.131,443,true,US,SJC,San Jose,157 ms,4.7
-173.242.124.213,443,true,US,LAX,Los Angeles,180 ms,4.5
-199.193.126.19,443,true,US,LAX,Los Angeles,181 ms,4.4
-154.17.12.190,443,true,US,LAX,Los Angeles,172 ms,4.2
-23.165.40.119,443,true,US,LAX,Los Angeles,175 ms,4.1
+80.251.213.234,8443,true,US,LAX,Los Angeles,179 ms,4.9
+207.60.50.14,8443,true,US,LAX,Los Angeles,170 ms,4.6
+154.17.12.26,8443,true,US,LAX,Los Angeles,171 ms,3.8
+207.60.50.24,8443,true,US,LAX,Los Angeles,170 ms,3.1
+64.64.253.120,8443,true,US,LAX,Los Angeles,181 ms,3.0
+104.194.91.229,443,true,US,LAX,Los Angeles,173 ms,4.9
+199.193.126.19,443,true,US,LAX,Los Angeles,178 ms,4.4
+173.242.124.213,443,true,US,LAX,Los Angeles,180 ms,4.3
+199.19.106.202,443,true,US,LAX,Los Angeles,173 ms,4.1
+198.176.49.165,443,true,US,LAX,Los Angeles,179 ms,4.0
