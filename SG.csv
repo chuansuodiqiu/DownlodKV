@@ -1,23 +1,20 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-8.219.114.201,2053,true,SG,SIN,Singapore,252 ms,2.7
-8.219.50.180,2053,true,SG,SIN,Singapore,298 ms,2.5
-8.222.137.192,2083,true,SG,SIN,Singapore,243 ms,2.8
-8.219.104.37,2083,true,SG,SIN,Singapore,242 ms,2.7
-8.219.114.201,2083,true,SG,SIN,Singapore,239 ms,2.7
-8.222.237.131,2083,true,SG,SIN,Singapore,238 ms,2.6
-8.219.78.1,2083,true,SG,SIN,Singapore,236 ms,2.5
-178.173.237.223,2087,true,HK,HKG,Hong Kong,38 ms,7.9
-47.243.5.154,2087,true,HK,HKG,Hong Kong,41 ms,7.1
+8.219.104.37,2053,true,SG,SIN,Singapore,218 ms,2.8
+8.219.114.201,2053,true,SG,SIN,Singapore,223 ms,2.8
+47.236.232.148,2053,true,SG,SIN,Singapore,213 ms,2.7
+8.219.114.201,2083,true,SG,SIN,Singapore,223 ms,2.9
+8.222.237.131,2083,true,SG,SIN,Singapore,226 ms,2.7
+47.236.232.148,2087,true,SG,SIN,Singapore,229 ms,2.8
 8.219.104.37,2087,true,SG,SIN,Singapore,217 ms,2.7
-8.222.137.192,2087,true,SG,SIN,Singapore,216 ms,2.5
-8.219.114.201,2087,true,SG,SIN,Singapore,220 ms,2.5
-47.243.5.154,2096,true,HK,HKG,Hong Kong,42 ms,9.1
-8.219.237.250,2096,true,SG,SIN,Singapore,280 ms,2.9
-8.222.193.65,2096,true,SG,SIN,Singapore,229 ms,2.7
-47.242.202.230,8443,true,HK,HKG,Hong Kong,38 ms,6.5
-8.217.239.116,8443,true,HK,HKG,Hong Kong,44 ms,6.0
-8.219.104.37,8443,true,SG,SIN,Singapore,216 ms,2.9
-8.219.237.250,8443,true,SG,SIN,Singapore,224 ms,2.6
-47.236.232.148,8443,true,SG,SIN,Singapore,225 ms,2.5
-89.28.239.27,443,true,SG,SIN,Singapore,74 ms,7.0
-8.219.114.201,443,true,SG,SIN,Singapore,217 ms,2.6
+8.219.114.201,2087,true,SG,SIN,Singapore,223 ms,2.6
+8.219.78.1,2087,true,SG,SIN,Singapore,223 ms,2.5
+8.219.50.180,2087,true,SG,SIN,Singapore,218 ms,2.5
+8.219.104.37,2096,true,SG,SIN,Singapore,219 ms,2.8
+47.237.83.20,2096,true,SG,SIN,Singapore,225 ms,2.6
+8.219.50.180,2096,true,SG,SIN,Singapore,218 ms,2.5
+8.218.11.90,8443,true,HK,HKG,Hong Kong,43 ms,6.6
+47.236.232.148,8443,true,SG,SIN,Singapore,221 ms,2.6
+8.222.193.65,8443,true,SG,SIN,Singapore,232 ms,2.5
+89.28.239.27,443,true,SG,SIN,Singapore,76 ms,5.8
+166.88.7.235,443,true,SG,SIN,Singapore,104 ms,4.1
+8.219.114.201,443,true,SG,SIN,Singapore,218 ms,2.6
