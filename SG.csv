@@ -1,28 +1,27 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-47.243.243.14,2053,true,HK,HKG,Hong Kong,43 ms,9.2
-47.242.119.104,2053,true,SG,SIN,Singapore,72 ms,8.2
-8.222.169.222,2053,true,SG,SIN,Singapore,223 ms,2.7
-8.219.194.170,2053,true,SG,SIN,Singapore,227 ms,2.7
-8.219.229.190,2053,true,SG,SIN,Singapore,225 ms,2.6
-8.219.40.37,2083,true,SG,SIN,Singapore,81 ms,8.5
-47.242.232.14,2083,true,SG,SIN,Singapore,69 ms,8.1
-8.210.89.245,2083,true,HK,HKG,Hong Kong,42 ms,5.9
-8.210.48.107,2083,true,SG,SIN,Singapore,75 ms,4.5
-8.219.124.227,2083,true,SG,SIN,Singapore,216 ms,2.7
-8.218.1.163,2087,true,HK,HKG,Hong Kong,48 ms,8.6
-8.219.40.37,2087,true,SG,SIN,Singapore,86 ms,7.3
-8.219.11.158,2087,true,SG,SIN,Singapore,231 ms,2.8
-8.219.147.58,2087,true,SG,SIN,Singapore,257 ms,2.7
-8.219.120.87,2087,true,SG,SIN,Singapore,226 ms,2.6
-47.243.243.14,2096,true,SG,SIN,Singapore,70 ms,9.1
-8.210.48.107,2096,true,SG,SIN,Singapore,71 ms,5.9
-8.222.208.38,2096,true,SG,SIN,Singapore,223 ms,2.8
-47.237.125.8,2096,true,SG,SIN,Singapore,242 ms,2.8
-47.237.121.38,2096,true,SG,SIN,Singapore,213 ms,2.5
-47.243.243.14,8443,true,HK,HKG,Hong Kong,40 ms,9.6
-8.219.142.191,8443,true,SG,SIN,Singapore,217 ms,2.7
-8.222.191.138,8443,true,SG,SIN,Singapore,225 ms,2.6
-8.219.229.190,8443,true,SG,SIN,Singapore,220 ms,2.5
-8.219.147.58,8443,true,SG,SIN,Singapore,222 ms,2.5
-89.28.239.27,443,true,SG,SIN,Singapore,77 ms,5.8
-166.88.7.235,443,true,SG,SIN,Singapore,132 ms,3.4
+8.219.6.150,2053,true,SG,SIN,Singapore,230 ms,2.7
+8.219.194.170,2053,true,SG,SIN,Singapore,231 ms,2.5
+8.219.117.198,2053,true,SG,SIN,Singapore,235 ms,2.5
+8.219.142.191,2053,true,SG,SIN,Singapore,238 ms,2.5
+8.219.200.145,2053,true,SG,SIN,Singapore,230 ms,2.5
+8.219.40.37,2083,true,SG,SIN,Singapore,81 ms,8.1
+47.237.121.38,2083,true,SG,SIN,Singapore,233 ms,2.8
+8.222.208.38,2083,true,SG,SIN,Singapore,230 ms,2.7
+8.219.49.65,2083,true,SG,SIN,Singapore,228 ms,2.6
+8.222.169.222,2083,true,SG,SIN,Singapore,229 ms,2.6
+8.219.40.37,2087,true,SG,SIN,Singapore,80 ms,7.7
+8.219.194.170,2087,true,SG,SIN,Singapore,229 ms,2.7
+47.237.121.38,2087,true,SG,SIN,Singapore,243 ms,2.7
+8.219.120.87,2087,true,SG,SIN,Singapore,232 ms,2.5
+8.222.164.209,2087,true,SG,SIN,Singapore,234 ms,2.5
+47.237.121.38,2096,true,SG,SIN,Singapore,227 ms,2.9
+8.219.201.245,2096,true,SG,SIN,Singapore,221 ms,2.8
+8.219.117.198,2096,true,SG,SIN,Singapore,223 ms,2.7
+47.237.125.8,2096,true,SG,SIN,Singapore,219 ms,2.7
+8.222.164.209,2096,true,SG,SIN,Singapore,215 ms,2.6
+8.219.147.58,8443,true,SG,SIN,Singapore,226 ms,2.8
+47.236.83.239,8443,true,SG,SIN,Singapore,228 ms,2.6
+8.222.164.209,8443,true,SG,SIN,Singapore,217 ms,2.6
+8.219.126.240,8443,true,SG,SIN,Singapore,228 ms,2.6
+8.222.208.38,8443,true,SG,SIN,Singapore,223 ms,2.5
+89.28.239.27,443,true,SG,SIN,Singapore,95 ms,5.1
