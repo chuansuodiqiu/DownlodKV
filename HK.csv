@@ -1,27 +1,16 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-8.217.250.222,2053,true,HK,HKG,Hong Kong,46 ms,9.1
-8.210.175.109,2053,true,HK,HKG,Hong Kong,40 ms,8.9
-47.243.243.14,2053,true,HK,HKG,Hong Kong,42 ms,8.6
-47.76.32.108,2053,true,HK,HKG,Hong Kong,44 ms,7.9
-8.210.48.107,2053,true,HK,HKG,Hong Kong,39 ms,6.4
-47.243.243.14,2083,true,HK,HKG,Hong Kong,84 ms,9.7
-8.210.48.107,2083,true,HK,HKG,Hong Kong,76 ms,9.6
-8.218.1.163,2083,true,HK,HKG,Hong Kong,82 ms,8.5
-8.210.175.109,2083,true,HK,HKG,Hong Kong,86 ms,7.7
-8.217.250.222,2083,true,HK,HKG,Hong Kong,86 ms,7.6
-178.173.237.223,2087,true,HK,HKG,Hong Kong,43 ms,8.8
-8.218.1.163,2087,true,HK,HKG,Hong Kong,38 ms,8.7
-8.210.175.109,2087,true,HK,HKG,Hong Kong,38 ms,8.1
-8.210.48.107,2087,true,SG,SIN,Singapore,68 ms,6.9
-47.243.70.186,2087,true,HK,HKG,Hong Kong,44 ms,5.2
-8.218.1.163,2096,true,HK,HKG,Hong Kong,53 ms,8.6
-8.210.175.109,2096,true,HK,HKG,Hong Kong,58 ms,7.2
-8.210.48.107,2096,true,HK,HKG,Hong Kong,91 ms,6.8
-47.76.146.1,2096,true,HK,HKG,Hong Kong,61 ms,4.5
-47.238.5.0,2096,true,HK,HKG,Hong Kong,53 ms,2.9
-8.218.1.163,8443,true,HK,HKG,Hong Kong,81 ms,9.5
-8.210.48.107,8443,true,SG,SIN,Singapore,82 ms,8.8
-47.243.243.14,8443,true,SG,SIN,Singapore,82 ms,8.7
-47.242.232.14,8443,true,HK,HKG,Hong Kong,56 ms,7.8
-47.76.32.108,8443,true,HK,HKG,Hong Kong,48 ms,3.9
-202.66.132.250,443,true,HK,HKG,Hong Kong,41 ms,3.5
+47.242.232.14,2053,true,HK,HKG,Hong Kong,43 ms,9.6
+47.243.243.14,2053,true,HK,HKG,Hong Kong,41 ms,8.9
+47.238.35.50,2053,true,HK,HKG,Hong Kong,39 ms,7.5
+8.210.245.224,2053,true,HK,HKG,Hong Kong,44 ms,6.6
+47.243.243.14,2083,true,HK,HKG,Hong Kong,39 ms,9.7
+8.210.245.224,2083,true,HK,HKG,Hong Kong,38 ms,8.5
+47.242.119.104,2083,true,HK,HKG,Hong Kong,40 ms,8.5
+47.242.234.127,2083,true,HK,HKG,Hong Kong,44 ms,6.6
+47.76.32.108,2096,true,HK,HKG,Hong Kong,41 ms,9.7
+47.242.232.14,2096,true,HK,HKG,Hong Kong,41 ms,9.7
+47.243.243.14,2096,true,HK,HKG,Hong Kong,41 ms,9.6
+8.210.245.224,2096,true,HK,HKG,Hong Kong,43 ms,9.0
+47.76.227.40,2096,true,HK,HKG,Hong Kong,37 ms,7.7
+47.243.243.14,8443,true,HK,HKG,Hong Kong,40 ms,9.5
+8.210.245.224,8443,true,HK,HKG,Hong Kong,44 ms,3.4
