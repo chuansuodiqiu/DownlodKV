@@ -1,12 +1,9 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-8.217.123.243,2053,true,HK,HKG,Hong Kong,47 ms,9.1
-8.210.85.222,2053,true,SG,SIN,Singapore,71 ms,8.9
-8.217.123.243,2083,true,HK,HKG,Hong Kong,41 ms,9.2
-8.217.123.243,2087,true,HK,HKG,Hong Kong,84 ms,8.9
-8.210.85.222,2087,true,HK,HKG,Hong Kong,84 ms,7.4
-8.217.123.243,2096,true,HK,HKG,Hong Kong,52 ms,9.2
-8.210.85.222,2096,true,HK,HKG,Hong Kong,52 ms,8.6
-8.210.85.222,8443,true,HK,HKG,Hong Kong,42 ms,9.2
-8.217.123.243,8443,true,HK,HKG,Hong Kong,42 ms,9.2
-43.154.230.30,443,true,HK,HKG,Hong Kong,100 ms,3.8
-45.92.158.126,443,true,HK,HKG,Hong Kong,46 ms,3.3
+8.210.85.222,2053,true,HK,HKG,Hong Kong,38 ms,8.5
+8.217.123.243,2053,true,HK,HKG,Hong Kong,39 ms,8.5
+8.217.123.243,2083,true,HK,HKG,Hong Kong,40 ms,8.0
+8.210.85.222,2087,true,HK,HKG,Hong Kong,50 ms,9.6
+8.217.123.243,2087,true,HK,HKG,Hong Kong,49 ms,9.0
+8.217.123.243,8443,true,HK,HKG,Hong Kong,77 ms,9.3
+154.12.60.51,443,true,HK,HKG,Hong Kong,54 ms,8.9
+45.92.158.126,443,true,HK,HKG,Hong Kong,54 ms,2.5
