@@ -1,15 +1,15 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-148.135.40.161,2053,true,US,LAX,Los Angeles,203 ms,5.6
-80.251.211.235,2053,true,US,LAX,Los Angeles,171 ms,5.4
-15.204.67.30,2083,true,US,SEA,Seattle,221 ms,3.5
-148.135.107.122,2096,true,US,LAX,Los Angeles,202 ms,6.7
-154.21.193.39,8443,true,US,LAX,Los Angeles,227 ms,5.7
-64.64.253.120,8443,true,US,LAX,Los Angeles,175 ms,5.6
-38.106.23.161,8443,true,US,LAX,Los Angeles,177 ms,5.6
-207.60.50.14,8443,true,US,LAX,Los Angeles,165 ms,5.3
-207.148.17.68,8443,true,US,EWR,Newark,252 ms,5.2
-173.242.123.213,443,true,US,LAX,Los Angeles,172 ms,7.3
-154.21.87.49,443,true,US,LAX,Los Angeles,185 ms,7.1
-154.12.48.176,443,true,US,LAX,Los Angeles,180 ms,7.0
-199.193.126.19,443,true,US,LAX,Los Angeles,185 ms,6.9
-104.194.91.229,443,true,US,LAX,Los Angeles,171 ms,6.7
+154.21.193.39,2053,true,US,LAX,Los Angeles,208 ms,6.8
+80.251.211.235,2053,true,US,LAX,Los Angeles,177 ms,5.1
+152.42.152.111,2083,true,US,EWR,Newark,253 ms,3.6
+148.135.107.122,2096,true,US,LAX,Los Angeles,206 ms,6.3
+137.220.34.134,8443,true,US,SEA,Seattle,262 ms,6.2
+207.60.50.14,8443,true,US,LAX,Los Angeles,173 ms,6.0
+154.7.179.76,8443,true,US,LAX,Los Angeles,204 ms,6.0
+207.60.50.24,8443,true,US,LAX,Los Angeles,173 ms,5.8
+80.251.213.234,8443,true,US,LAX,Los Angeles,176 ms,5.3
+173.242.123.213,443,true,US,LAX,Los Angeles,181 ms,7.7
+154.40.39.232,443,true,US,LAX,Los Angeles,189 ms,7.2
+154.21.87.49,443,true,US,LAX,Los Angeles,175 ms,7.2
+154.12.48.176,443,true,US,LAX,Los Angeles,202 ms,7.1
+199.193.126.19,443,true,US,LAX,Los Angeles,174 ms,6.8
