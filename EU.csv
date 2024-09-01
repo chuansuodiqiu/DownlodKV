@@ -1,21 +1,7 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-18.194.183.74,2053,true,DE,FRA,Frankfurt,230 ms,6.2
-188.166.104.223,2053,true,NL,AMS,Amsterdam,264 ms,5.8
-165.232.70.127,2053,true,DE,FRA,Frankfurt,266 ms,5.2
-164.92.219.230,2053,true,NL,AMS,Amsterdam,257 ms,5.0
-104.207.131.222,2053,true,DE,FRA,Frankfurt,260 ms,4.9
-18.199.85.113,2083,true,DE,FRA,Frankfurt,211 ms,5.3
-104.238.159.43,2083,true,DE,FRA,Frankfurt,280 ms,5.3
-13.53.81.150,2083,true,SE,ARN,Stockholm,241 ms,5.1
-209.38.167.59,2083,true,GB,LHR,London,277 ms,4.9
-74.119.195.125,2096,true,NL,AMS,Amsterdam,239 ms,6.6
-51.103.225.73,2096,true,IT,MXP,Milan,224 ms,6.0
-35.157.121.50,2096,true,DE,FRA,Frankfurt,231 ms,5.0
-52.57.63.1,2096,true,DE,FRA,Frankfurt,211 ms,4.9
-161.35.21.2,8443,true,DE,FRA,Frankfurt,257 ms,5.2
-13.36.64.125,8443,true,FR,CDG,Paris,223 ms,5.1
-157.245.17.52,8443,true,DE,FRA,Frankfurt,267 ms,4.9
-146.190.226.195,8443,true,NL,AMS,Amsterdam,254 ms,4.9
-135.181.46.229,443,true,FI,HEL,Helsinki,293 ms,6.0
-144.21.34.196,443,true,DE,FRA,Frankfurt,274 ms,5.1
-158.101.214.80,443,true,DE,FRA,Frankfurt,272 ms,5.0
+13.60.115.44,2053,true,SE,ARN,Stockholm,241 ms,5.3
+164.92.219.230,2053,true,NL,AMS,Amsterdam,259 ms,5.1
+165.232.70.127,2053,true,DE,FRA,Frankfurt,270 ms,5.0
+164.90.211.172,2096,true,DE,FRA,Frankfurt,269 ms,5.0
+141.98.233.61,443,true,NL,AMS,Amsterdam,245 ms,5.7
+185.209.23.63,443,true,NL,AMS,Amsterdam,217 ms,5.4
