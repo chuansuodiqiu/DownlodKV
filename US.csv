@@ -1,9 +1,6 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-154.26.238.84,8443,true,US,LAX,Los Angeles,164 ms,2.6
-154.17.229.59,8443,true,US,LAX,Los Angeles,165 ms,2.5
-64.64.228.98,8443,true,US,LAX,Los Angeles,168 ms,2.5
-216.24.181.231,443,true,US,LAX,Los Angeles,191 ms,2.7
-154.9.248.216,443,true,US,LAX,Los Angeles,177 ms,2.6
-38.143.0.59,443,true,US,LAX,Los Angeles,169 ms,2.6
-173.242.124.213,443,true,US,LAX,Los Angeles,193 ms,2.6
-154.9.204.192,443,true,US,LAX,Los Angeles,172 ms,2.5
+154.9.248.216,443,true,US,LAX,Los Angeles,176 ms,2.8
+38.143.0.91,443,true,US,LAX,Los Angeles,171 ms,2.7
+172.82.16.99,443,true,US,SJC,San Jose,170 ms,2.6
+104.194.91.229,443,true,US,SJC,San Jose,176 ms,2.6
+199.193.126.19,443,true,US,SJC,San Jose,177 ms,2.5
