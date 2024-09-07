@@ -1,5 +1,5 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-206.238.237.15,8443,true,US,SJC,San Jose,184 ms,3.4
-43.153.103.203,443,true,US,SJC,San Jose,183 ms,3.7
-199.19.109.64,443,true,US,LAX,Los Angeles,179 ms,2.8
-104.194.91.229,443,true,US,LAX,Los Angeles,172 ms,2.6
+24.199.104.112,2053,true,US,SJC,San Jose,182 ms,2.5
+38.59.242.131,443,true,US,SJC,San Jose,156 ms,3.3
+216.24.181.231,443,true,US,LAX,Los Angeles,172 ms,2.5
+154.40.39.232,443,true,US,LAX,Los Angeles,172 ms,2.5
