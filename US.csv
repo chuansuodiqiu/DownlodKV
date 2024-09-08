@@ -1,20 +1,17 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-5.161.21.130,2053,true,US,IAD,Ashburn,265 ms,5.5
-24.199.104.112,2053,true,US,SJC,San Jose,205 ms,5.4
-5.161.131.144,2053,true,US,IAD,Ashburn,253 ms,5.3
-107.173.148.41,2053,true,US,SJC,San Jose,182 ms,5.2
-5.161.242.115,2053,true,US,IAD,Ashburn,256 ms,5.2
-5.161.204.205,2083,true,US,IAD,Ashburn,247 ms,5.6
-5.161.155.58,2083,true,US,IAD,Ashburn,239 ms,5.4
-5.161.247.132,2087,true,US,IAD,Ashburn,240 ms,5.5
-107.172.96.205,2087,true,US,SJC,San Jose,196 ms,5.5
-128.199.8.151,8443,true,US,SJC,San Jose,187 ms,6.6
-138.68.44.154,8443,true,US,SJC,San Jose,188 ms,5.9
-155.138.238.22,8443,true,US,ATL,Atlanta,237 ms,5.7
-137.220.34.134,8443,true,US,SEA,Seattle,200 ms,5.6
-23.94.223.102,8443,true,US,SJC,San Jose,179 ms,5.5
-45.139.193.40,443,true,US,SJC,San Jose,157 ms,7.2
-45.59.184.55,443,true,US,SJC,San Jose,180 ms,7.0
-185.148.13.139,443,true,US,SJC,San Jose,208 ms,6.0
-83.147.240.130,443,true,US,SJC,San Jose,187 ms,5.9
-45.8.157.134,443,true,US,ATL,Atlanta,261 ms,5.9
+144.126.222.173,2053,true,US,SJC,San Jose,175 ms,6.4
+107.174.250.42,2053,true,US,ORD,Chicago,248 ms,5.5
+178.156.129.27,2053,true,US,IAD,Ashburn,256 ms,5.4
+5.161.131.144,2053,true,US,IAD,Ashburn,273 ms,5.3
+155.138.217.97,2053,true,US,ATL,Atlanta,247 ms,5.3
+5.161.155.58,2083,true,US,IAD,Ashburn,253 ms,5.8
+5.161.247.132,2087,true,US,IAD,Ashburn,245 ms,5.0
+137.220.34.134,8443,true,US,SEA,Seattle,204 ms,5.7
+138.68.44.154,8443,true,US,SJC,San Jose,180 ms,5.7
+138.68.44.183,8443,true,US,SJC,San Jose,181 ms,5.2
+155.138.217.97,8443,true,US,ATL,Atlanta,241 ms,5.1
+45.139.193.40,443,true,US,SJC,San Jose,158 ms,6.7
+45.59.184.55,443,true,US,SJC,San Jose,271 ms,6.3
+207.2.120.16,443,true,US,SJC,San Jose,181 ms,6.1
+103.152.113.19,443,true,US,SJC,San Jose,189 ms,5.7
+50.228.203.26,443,true,US,MIA,Miami,264 ms,5.7
