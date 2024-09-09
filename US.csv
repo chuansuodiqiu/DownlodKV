@@ -1,21 +1,20 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-103.184.45.116,2053,true,US,SJC,San Jose,214 ms,7.2
-24.199.104.112,2053,true,US,SJC,San Jose,217 ms,5.9
-5.161.251.186,2053,true,US,IAD,Ashburn,234 ms,5.6
-180.131.145.0,2053,true,US,SEA,Seattle,220 ms,5.5
-107.173.148.41,2053,true,US,SJC,San Jose,216 ms,5.1
-15.204.67.30,2083,true,US,SEA,Seattle,209 ms,5.1
-23.95.247.225,2087,true,US,SJC,San Jose,190 ms,5.4
-5.161.247.132,2087,true,US,IAD,Ashburn,250 ms,5.4
-107.172.96.205,2087,true,US,SJC,San Jose,200 ms,5.3
-103.184.45.126,2096,true,US,SJC,San Jose,184 ms,6.0
-128.199.8.151,8443,true,US,SJC,San Jose,177 ms,6.0
-138.68.44.183,8443,true,US,SJC,San Jose,187 ms,5.9
-107.172.98.29,8443,true,US,SJC,San Jose,188 ms,5.7
-164.92.107.53,8443,true,US,SJC,San Jose,180 ms,5.4
-104.168.82.140,8443,true,US,SEA,Seattle,200 ms,5.4
-45.139.193.40,443,true,US,SJC,San Jose,158 ms,7.1
-5.78.51.6,443,true,US,PDX,Portland,201 ms,6.6
-38.175.195.197,443,true,US,SEA,Seattle,213 ms,6.4
-64.23.181.202,443,true,US,SJC,San Jose,190 ms,6.2
-34.41.252.92,443,true,US,ORD,Chicago,219 ms,6.1
+5.161.251.186,2053,true,US,IAD,Ashburn,285 ms,6.8
+107.174.250.42,2053,true,US,ORD,Chicago,287 ms,5.2
+5.161.204.236,2053,true,US,IAD,Ashburn,286 ms,5.2
+5.161.131.144,2053,true,US,IAD,Ashburn,290 ms,4.6
+107.173.148.41,2053,true,US,SJC,San Jose,200 ms,4.2
+146.235.211.70,2083,true,US,SJC,San Jose,205 ms,4.4
+5.161.155.58,2083,true,US,IAD,Ashburn,243 ms,4.1
+5.161.247.132,2087,true,US,IAD,Ashburn,253 ms,5.3
+107.172.96.205,2087,true,US,SJC,San Jose,202 ms,4.7
+164.92.107.53,8443,true,US,SJC,San Jose,186 ms,5.9
+24.199.69.168,8443,true,US,SJC,San Jose,196 ms,5.7
+144.126.216.189,8443,true,US,SJC,San Jose,191 ms,5.0
+137.220.34.134,8443,true,US,SEA,Seattle,234 ms,5.0
+107.172.98.29,8443,true,US,SJC,San Jose,192 ms,4.3
+45.59.184.55,443,true,US,SJC,San Jose,187 ms,6.6
+45.139.193.40,443,true,US,SJC,San Jose,157 ms,6.6
+5.161.131.144,443,true,US,IAD,Ashburn,257 ms,6.4
+185.148.13.139,443,true,US,SJC,San Jose,178 ms,6.2
+172.82.16.99,443,true,US,SJC,San Jose,172 ms,6.1
