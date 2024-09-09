@@ -1,22 +1,21 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-5.161.131.144,2053,true,US,IAD,Ashburn,255 ms,6.8
-5.161.251.186,2053,true,US,IAD,Ashburn,240 ms,6.5
-103.184.45.159,2053,true,US,SJC,San Jose,235 ms,6.3
-154.218.15.243,2053,true,US,SJC,San Jose,229 ms,5.8
-103.184.45.150,2053,true,US,SJC,San Jose,228 ms,5.7
-103.184.45.137,2083,true,US,SJC,San Jose,184 ms,7.9
-103.184.45.226,2083,true,US,SJC,San Jose,176 ms,7.0
-103.184.45.124,2083,true,US,SJC,San Jose,187 ms,6.8
-156.238.18.131,2083,true,US,SJC,San Jose,179 ms,6.2
-103.184.45.185,2083,true,US,SJC,San Jose,256 ms,5.7
-103.184.44.188,2087,true,US,SJC,San Jose,223 ms,4.9
-103.184.45.103,2096,true,US,SJC,San Jose,212 ms,7.7
-154.218.15.77,2096,true,US,SJC,San Jose,225 ms,7.1
-103.184.45.184,8443,true,US,SJC,San Jose,192 ms,5.7
-138.68.44.183,8443,true,US,SJC,San Jose,198 ms,5.5
-107.172.98.29,8443,true,US,SJC,San Jose,191 ms,5.1
-103.184.44.61,443,true,US,SJC,San Jose,188 ms,7.5
-45.139.193.40,443,true,US,SJC,San Jose,157 ms,6.5
-107.175.76.16,443,true,CA,YYZ,Toronto,254 ms,6.1
-45.59.184.55,443,true,US,SJC,San Jose,179 ms,5.9
-5.78.114.254,443,true,US,SEA,Seattle,202 ms,5.8
+103.184.45.116,2053,true,US,SJC,San Jose,214 ms,7.2
+24.199.104.112,2053,true,US,SJC,San Jose,217 ms,5.9
+5.161.251.186,2053,true,US,IAD,Ashburn,234 ms,5.6
+180.131.145.0,2053,true,US,SEA,Seattle,220 ms,5.5
+107.173.148.41,2053,true,US,SJC,San Jose,216 ms,5.1
+15.204.67.30,2083,true,US,SEA,Seattle,209 ms,5.1
+23.95.247.225,2087,true,US,SJC,San Jose,190 ms,5.4
+5.161.247.132,2087,true,US,IAD,Ashburn,250 ms,5.4
+107.172.96.205,2087,true,US,SJC,San Jose,200 ms,5.3
+103.184.45.126,2096,true,US,SJC,San Jose,184 ms,6.0
+128.199.8.151,8443,true,US,SJC,San Jose,177 ms,6.0
+138.68.44.183,8443,true,US,SJC,San Jose,187 ms,5.9
+107.172.98.29,8443,true,US,SJC,San Jose,188 ms,5.7
+164.92.107.53,8443,true,US,SJC,San Jose,180 ms,5.4
+104.168.82.140,8443,true,US,SEA,Seattle,200 ms,5.4
+45.139.193.40,443,true,US,SJC,San Jose,158 ms,7.1
+5.78.51.6,443,true,US,PDX,Portland,201 ms,6.6
+38.175.195.197,443,true,US,SEA,Seattle,213 ms,6.4
+64.23.181.202,443,true,US,SJC,San Jose,190 ms,6.2
+34.41.252.92,443,true,US,ORD,Chicago,219 ms,6.1
