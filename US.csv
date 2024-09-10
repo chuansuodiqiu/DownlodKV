@@ -1,14 +1,17 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-178.156.129.27,2053,true,US,ATL,Atlanta,248 ms,4.2
-107.174.250.42,2053,true,US,ORD,Chicago,251 ms,4.1
-5.161.159.198,2096,true,US,CLT,Charlotte,253 ms,3.4
-5.161.126.174,8443,true,US,ATL,Atlanta,253 ms,5.1
-164.92.107.53,8443,true,US,SJC,San Jose,180 ms,5.0
-24.199.69.168,8443,true,US,SJC,San Jose,177 ms,4.6
-144.126.216.189,8443,true,US,SJC,San Jose,181 ms,4.4
-137.220.34.134,8443,true,US,SEA,Seattle,211 ms,3.7
-45.59.184.55,443,true,US,SJC,San Jose,193 ms,6.7
-45.139.193.40,443,true,US,SJC,San Jose,160 ms,6.4
-172.82.16.99,443,true,US,SJC,San Jose,174 ms,5.9
-45.150.165.13,443,true,US,SEA,Seattle,176 ms,5.7
-5.78.51.6,443,true,US,PDX,Portland,201 ms,5.7
+155.138.217.97,2053,true,US,ATL,Atlanta,261 ms,4.8
+24.199.104.112,2053,true,US,SJC,San Jose,205 ms,4.6
+107.174.250.42,2053,true,US,ORD,Chicago,273 ms,4.4
+178.156.129.27,2053,true,US,ATL,Atlanta,267 ms,3.8
+5.161.242.115,2053,true,US,ATL,Atlanta,265 ms,3.4
+5.161.155.58,2083,true,US,ATL,Atlanta,247 ms,4.7
+5.161.247.132,2087,true,US,CLT,Charlotte,299 ms,4.4
+164.92.107.53,8443,true,US,SJC,San Jose,178 ms,5.3
+144.126.216.189,8443,true,US,SJC,San Jose,196 ms,4.0
+178.156.134.126,8443,true,US,ATL,Atlanta,261 ms,3.1
+37.1.208.147,8443,true,US,ORD,Chicago,236 ms,3.0
+45.139.193.40,443,true,US,SJC,San Jose,157 ms,6.9
+204.110.220.254,443,true,US,PDX,Portland,196 ms,6.7
+54.219.139.36,443,true,US,SJC,San Jose,181 ms,6.4
+45.150.165.13,443,true,US,SEA,Seattle,177 ms,6.2
+204.110.220.3,443,true,US,PDX,Portland,197 ms,6.1
