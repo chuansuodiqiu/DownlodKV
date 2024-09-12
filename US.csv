@@ -1,31 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-103.184.44.75,2053,true,US,SJC,San Jose,243 ms,8.5
-103.184.45.150,2053,true,US,SJC,San Jose,237 ms,8.4
-103.184.44.179,2053,true,US,SJC,San Jose,239 ms,8.4
-103.184.45.42,2053,true,US,SJC,San Jose,243 ms,8.3
-103.184.45.75,2053,true,US,SJC,San Jose,240 ms,8.3
-103.184.45.242,2083,true,US,SJC,San Jose,178 ms,8.4
-103.184.45.45,2083,true,US,SJC,San Jose,180 ms,8.4
-103.184.45.78,2083,true,US,SJC,San Jose,177 ms,8.4
-103.184.44.179,2083,true,US,SJC,San Jose,175 ms,8.4
-154.218.15.94,2083,true,US,SJC,San Jose,176 ms,8.2
-103.184.45.115,2087,true,US,SJC,San Jose,189 ms,8.3
-154.218.15.121,2087,true,US,SJC,San Jose,187 ms,8.3
-103.184.44.56,2087,true,US,SJC,San Jose,182 ms,8.2
-103.184.45.77,2087,true,US,SJC,San Jose,183 ms,8.2
-103.184.45.57,2087,true,US,SJC,San Jose,190 ms,8.2
-103.184.45.162,2096,true,US,SJC,San Jose,184 ms,8.3
-103.184.45.253,2096,true,US,SJC,San Jose,179 ms,8.3
-103.184.45.146,2096,true,US,SJC,San Jose,181 ms,8.3
-103.184.45.252,2096,true,US,SJC,San Jose,182 ms,8.2
-154.218.15.126,2096,true,US,SJC,San Jose,187 ms,8.2
-103.184.45.106,8443,true,US,SJC,San Jose,189 ms,8.4
-103.184.45.169,8443,true,US,SJC,San Jose,181 ms,8.4
-103.184.44.87,8443,true,US,SJC,San Jose,179 ms,8.3
-154.218.15.164,8443,true,US,SJC,San Jose,176 ms,8.3
-103.184.45.74,8443,true,US,SJC,San Jose,190 ms,8.2
-103.184.45.8,443,true,US,SJC,San Jose,180 ms,8.4
-154.218.15.33,443,true,US,SJC,San Jose,175 ms,8.4
-156.238.18.107,443,true,US,SJC,San Jose,173 ms,8.3
-103.184.44.61,443,true,US,SJC,San Jose,181 ms,8.3
-154.218.15.82,443,true,US,SJC,San Jose,178 ms,8.3
+198.46.131.76,2053,true,US,BUF,Buffalo,281 ms,5.3
+15.204.67.30,2083,true,US,SEA,Seattle,203 ms,5.0
+164.92.107.53,8443,true,US,SJC,San Jose,176 ms,5.2
+138.68.44.183,8443,true,US,SJC,San Jose,205 ms,4.9
+24.199.69.168,8443,true,US,SJC,San Jose,181 ms,4.9
+45.139.193.40,443,true,US,SJC,San Jose,157 ms,7.6
+173.249.197.84,443,true,US,SJC,San Jose,192 ms,6.7
+5.78.114.254,443,true,US,SEA,Seattle,192 ms,6.4
+34.41.252.92,443,true,US,ORD,Chicago,222 ms,6.2
+5.78.51.6,443,true,US,PDX,Portland,205 ms,5.8
