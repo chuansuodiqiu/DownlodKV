@@ -1,20 +1,20 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-5.161.131.144,2053,true,US,IAD,Ashburn,254 ms,7.3
-5.161.21.130,2053,true,US,IAD,Ashburn,264 ms,6.1
-155.138.217.97,2053,true,US,ATL,Atlanta,290 ms,5.7
-24.199.104.112,2053,true,US,SJC,San Jose,234 ms,5.5
-180.131.145.0,2053,true,US,SEA,Seattle,235 ms,4.8
-5.161.155.58,2083,true,US,IAD,Ashburn,254 ms,6.0
-5.161.204.205,2083,true,US,IAD,Ashburn,254 ms,5.4
-23.95.247.225,2087,true,US,SJC,San Jose,193 ms,3.8
-5.161.159.198,2096,true,US,IAD,Ashburn,251 ms,4.0
-164.92.107.53,8443,true,US,SJC,San Jose,187 ms,5.9
-24.199.69.168,8443,true,US,SJC,San Jose,184 ms,5.7
-138.68.44.154,8443,true,US,SJC,San Jose,189 ms,4.7
-137.220.34.134,8443,true,US,SEA,Seattle,212 ms,4.5
-107.173.148.41,8443,true,US,SJC,San Jose,191 ms,4.4
-45.139.193.40,443,true,US,SJC,San Jose,158 ms,6.9
-64.23.181.202,443,true,US,SJC,San Jose,180 ms,6.3
-5.78.51.6,443,true,US,PDX,Portland,261 ms,6.1
-5.161.131.144,443,true,US,IAD,Ashburn,249 ms,6.0
-66.42.72.67,443,true,US,SEA,Seattle,202 ms,5.9
+5.161.21.130,2053,true,US,IAD,Ashburn,255 ms,6.0
+5.161.131.144,2053,true,US,IAD,Ashburn,249 ms,5.8
+24.199.104.112,2053,true,US,SJC,San Jose,187 ms,5.7
+107.174.250.42,2053,true,US,ORD,Chicago,255 ms,4.8
+180.131.145.0,2053,true,US,SEA,Seattle,197 ms,4.3
+5.161.155.58,2083,true,US,IAD,Ashburn,255 ms,5.7
+5.161.204.205,2083,true,US,IAD,Ashburn,256 ms,4.0
+107.172.96.205,2087,true,US,SJC,San Jose,185 ms,3.8
+5.161.159.198,2096,true,US,IAD,Ashburn,240 ms,3.1
+155.138.217.97,8443,true,US,ATL,Atlanta,247 ms,5.9
+138.68.44.154,8443,true,US,SJC,San Jose,184 ms,5.5
+24.199.69.168,8443,true,US,SJC,San Jose,176 ms,4.8
+164.92.107.53,8443,true,US,SJC,San Jose,199 ms,4.7
+146.190.33.224,8443,true,US,SJC,San Jose,191 ms,4.6
+64.23.181.202,443,true,US,SJC,San Jose,182 ms,7.6
+45.139.193.40,443,true,US,SJC,San Jose,158 ms,6.6
+5.161.131.144,443,true,US,IAD,Ashburn,249 ms,6.4
+66.42.72.67,443,true,US,SEA,Seattle,204 ms,6.3
+204.110.220.254,443,true,US,SEA,Seattle,207 ms,6.1
