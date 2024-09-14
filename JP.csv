@@ -1,13 +1,7 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-193.111.30.47,2053,true,JP,NRT,Tokyo,67 ms,9.7
-147.78.244.117,2053,true,JP,NRT,Tokyo,90 ms,8.4
-103.75.118.144,2053,true,JP,NRT,Tokyo,181 ms,6.3
-103.106.228.67,2053,true,JP,NRT,Tokyo,187 ms,5.4
-147.78.244.117,8443,true,JP,NRT,Tokyo,90 ms,8.8
-45.77.8.210,8443,true,JP,NRT,Tokyo,133 ms,5.9
-103.75.118.144,8443,true,JP,NRT,Tokyo,176 ms,5.7
-202.182.125.193,8443,true,JP,NRT,Tokyo,136 ms,5.3
-131.186.33.175,443,true,JP,NRT,Tokyo,132 ms,7.4
-219.111.17.202,443,true,JP,KIX,Osaka,100 ms,6.7
-103.106.228.69,443,true,JP,NRT,Tokyo,175 ms,6.4
-45.32.25.171,443,true,JP,NRT,Tokyo,139 ms,6.0
+147.78.244.117,2053,true,JP,NRT,Tokyo,92 ms,9.1
+193.111.30.47,2053,true,JP,NRT,Tokyo,184 ms,5.2
+147.78.244.117,8443,true,JP,NRT,Tokyo,92 ms,7.1
+45.77.8.210,8443,true,JP,NRT,Tokyo,137 ms,5.0
+64.176.46.50,443,true,JP,NRT,Tokyo,198 ms,6.3
+140.227.233.71,443,true,JP,NRT,Tokyo,193 ms,4.9
