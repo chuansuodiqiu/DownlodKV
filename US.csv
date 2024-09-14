@@ -1,21 +1,22 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-198.46.131.76,2053,true,US,BUF,Buffalo,288 ms,6.7
-5.161.131.144,2053,true,US,IAD,Ashburn,290 ms,4.4
-5.161.242.115,2053,true,US,IAD,Ashburn,291 ms,4.4
-107.173.148.41,2053,true,US,SJC,San Jose,234 ms,3.8
-5.161.126.174,2053,true,US,IAD,Ashburn,293 ms,3.7
-5.161.204.205,2083,true,US,IAD,Ashburn,264 ms,5.6
-146.235.211.70,2083,true,US,SJC,San Jose,198 ms,3.5
-23.95.247.225,2087,true,US,SJC,San Jose,203 ms,3.9
-107.172.96.205,2087,true,US,SJC,San Jose,203 ms,3.3
-5.161.159.198,2096,true,US,IAD,Ashburn,253 ms,3.1
-138.68.44.154,8443,true,US,SJC,San Jose,182 ms,5.3
-155.138.217.97,8443,true,US,ATL,Atlanta,237 ms,4.8
-107.172.98.29,8443,true,US,SJC,San Jose,203 ms,4.8
-138.68.44.183,8443,true,US,SJC,San Jose,202 ms,4.7
-144.126.216.189,8443,true,US,SJC,San Jose,189 ms,4.3
-45.139.193.40,443,true,US,SJC,San Jose,156 ms,7.4
-172.82.16.99,443,true,US,SJC,San Jose,173 ms,6.0
-148.100.78.167,443,true,US,IAD,Ashburn,251 ms,6.0
-185.148.13.139,443,true,US,SJC,San Jose,157 ms,5.9
-207.2.120.16,443,true,US,SJC,San Jose,192 ms,5.9
+144.126.222.173,2053,true,US,SJC,San Jose,181 ms,5.9
+155.138.217.97,2053,true,US,ATL,Atlanta,239 ms,5.9
+24.199.104.112,2053,true,US,SJC,San Jose,242 ms,5.2
+107.172.82.74,2053,true,US,SJC,San Jose,241 ms,4.2
+5.161.21.130,2053,true,US,IAD,Ashburn,242 ms,3.7
+15.204.67.30,2083,true,US,SEA,Seattle,214 ms,4.7
+5.161.204.205,2083,true,US,IAD,Ashburn,256 ms,4.0
+5.161.155.58,2083,true,US,IAD,Ashburn,245 ms,3.9
+146.235.211.70,2083,true,US,SJC,San Jose,174 ms,3.2
+23.95.247.225,2087,true,US,SJC,San Jose,194 ms,3.9
+5.161.159.198,2096,true,US,IAD,Ashburn,244 ms,5.0
+128.199.8.151,8443,true,US,SJC,San Jose,187 ms,6.0
+138.68.44.154,8443,true,US,SJC,San Jose,186 ms,5.5
+172.245.187.92,8443,true,CA,YYZ,Toronto,257 ms,5.1
+51.81.209.21,8443,true,US,SEA,Seattle,202 ms,4.8
+144.126.216.189,8443,true,US,SJC,San Jose,183 ms,4.3
+64.23.181.202,443,true,US,SJC,San Jose,183 ms,7.2
+45.139.193.40,443,true,US,SJC,San Jose,155 ms,7.0
+43.153.80.208,443,true,US,SJC,San Jose,173 ms,6.8
+173.249.197.84,443,true,US,SJC,San Jose,198 ms,6.5
+185.148.13.139,443,true,US,SJC,San Jose,157 ms,6.3
