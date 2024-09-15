@@ -1,2 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-8.222.67.79,443,true,US,IAD,Ashburn,91 ms,2.2
+107.172.96.205,2087,true,US,SJC,San Jose,224 ms,2.0
+146.190.33.224,8443,true,US,SJC,San Jose,236 ms,2.3
+164.92.107.53,8443,true,US,SJC,San Jose,207 ms,2.2
+23.239.2.154,8443,true,US,SJC,San Jose,207 ms,2.2
+198.23.246.215,8443,true,US,SJC,San Jose,237 ms,2.1
+146.235.197.123,443,true,US,SJC,San Jose,181 ms,2.5
+8.222.67.79,443,true,US,IAD,Ashburn,70 ms,2.4
+64.23.181.202,443,true,US,SJC,San Jose,177 ms,2.3
+45.59.184.55,443,true,US,SJC,San Jose,190 ms,2.3
+45.139.193.40,443,true,US,SJC,San Jose,156 ms,2.0
