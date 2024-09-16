@@ -1,9 +1,12 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-3.66.67.78,2053,true,DE,FRA,Frankfurt,225 ms,3.3
-35.157.121.50,2096,true,DE,FRA,Frankfurt,237 ms,4.8
-3.9.115.188,8443,true,GB,LHR,London,212 ms,5.3
-159.89.251.56,8443,true,GB,LHR,London,272 ms,4.2
-13.40.25.196,8443,true,GB,LHR,London,236 ms,3.7
-139.59.140.30,443,true,DE,FRA,Frankfurt,288 ms,4.8
-185.233.203.162,443,true,NL,AMS,Amsterdam,225 ms,4.3
-52.58.52.105,443,true,DE,FRA,Frankfurt,242 ms,3.2
+164.92.145.208,2053,true,NL,AMS,Amsterdam,267 ms,3.4
+143.47.243.144,8443,true,GB,LHR,London,284 ms,4.1
+3.121.208.144,8443,true,DE,FRA,Frankfurt,224 ms,3.5
+178.62.223.93,8443,true,NL,AMS,Amsterdam,279 ms,3.5
+64.226.69.207,8443,true,DE,FRA,Frankfurt,276 ms,3.3
+178.128.245.222,8443,true,NL,AMS,Amsterdam,274 ms,3.3
+185.106.94.67,443,true,DE,FRA,Frankfurt,260 ms,5.9
+146.190.236.144,443,true,NL,AMS,Amsterdam,286 ms,5.4
+18.156.209.101,443,true,DE,FRA,Frankfurt,229 ms,5.3
+213.183.48.227,443,true,PL,WAW,Warsaw,160 ms,5.2
+185.213.211.29,443,true,NL,AMS,Amsterdam,215 ms,5.1
