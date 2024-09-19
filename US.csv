@@ -1,17 +1,17 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-198.46.131.76,2053,true,US,BUF,Buffalo,247 ms,4.9
-5.161.131.144,2053,true,US,IAD,Ashburn,255 ms,4.2
-5.161.213.243,2053,true,US,IAD,Ashburn,253 ms,4.0
-5.161.204.205,2083,true,US,IAD,Ashburn,251 ms,5.4
-146.235.211.70,2083,true,US,SJC,San Jose,174 ms,3.9
-23.95.247.225,2087,true,US,SJC,San Jose,182 ms,3.1
-155.138.217.97,8443,true,US,ATL,Atlanta,236 ms,5.8
-138.68.44.154,8443,true,US,SJC,San Jose,198 ms,5.0
-5.161.213.243,8443,true,US,IAD,Ashburn,242 ms,4.6
-107.174.186.62,8443,true,US,SJC,San Jose,188 ms,4.5
-164.92.107.53,8443,true,US,SJC,San Jose,185 ms,4.3
-43.153.80.208,443,true,US,SJC,San Jose,160 ms,8.1
-45.139.193.40,443,true,US,SJC,San Jose,157 ms,7.8
-45.8.157.134,443,true,US,ATL,Atlanta,240 ms,6.1
-156.146.53.83,443,true,US,SJC,San Jose,185 ms,5.3
-204.110.220.3,443,true,US,PDX,Portland,217 ms,5.3
+104.167.196.124,2053,true,US,MIA,Miami,266 ms,5.5
+24.199.104.112,2053,true,US,SJC,San Jose,198 ms,5.3
+107.173.148.41,2053,true,US,SJC,San Jose,186 ms,4.4
+5.161.131.144,2053,true,US,IAD,Ashburn,253 ms,3.9
+23.95.247.225,2087,true,US,SJC,San Jose,188 ms,5.3
+107.172.96.205,2087,true,US,SJC,San Jose,187 ms,3.2
+107.172.98.29,8443,true,US,SJC,San Jose,184 ms,5.6
+164.92.107.53,8443,true,US,SJC,San Jose,184 ms,4.4
+107.174.186.62,8443,true,US,SJC,San Jose,182 ms,3.8
+104.168.82.140,8443,true,US,SEA,Seattle,201 ms,3.7
+107.172.142.136,8443,true,CA,YYZ,Toronto,247 ms,3.6
+23.94.56.230,443,true,US,SEA,Seattle,246 ms,6.9
+45.139.193.40,443,true,US,SJC,San Jose,169 ms,6.6
+172.82.16.99,443,true,US,SJC,San Jose,166 ms,6.2
+198.23.246.68,443,true,US,SJC,San Jose,200 ms,5.7
+38.175.195.197,443,true,US,SEA,Seattle,239 ms,5.7
