@@ -1,17 +1,16 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-5.161.21.130,2053,true,US,IAD,Ashburn,250 ms,5.6
-107.173.86.75,2053,true,US,SJC,San Jose,189 ms,5.3
-5.161.126.174,2053,true,US,IAD,Ashburn,245 ms,5.1
-5.161.155.58,2083,true,US,IAD,Ashburn,258 ms,5.9
-5.161.204.205,2083,true,US,IAD,Ashburn,245 ms,5.5
-23.95.247.225,2087,true,US,SJC,San Jose,189 ms,5.2
-51.81.209.21,8443,true,US,PDX,Portland,206 ms,6.3
-37.1.208.147,8443,true,US,ORD,Chicago,233 ms,6.1
-138.68.44.154,8443,true,US,SJC,San Jose,184 ms,6.0
-198.23.246.215,8443,true,US,SJC,San Jose,181 ms,5.8
-164.92.107.53,8443,true,US,SJC,San Jose,174 ms,5.7
-45.139.193.40,443,true,US,SJC,San Jose,157 ms,7.0
-45.59.184.55,443,true,US,SJC,San Jose,194 ms,6.2
-204.110.220.3,443,true,US,PDX,Portland,214 ms,6.2
-23.94.211.148,443,true,US,SEA,Seattle,206 ms,6.1
-5.161.128.98,443,true,US,IAD,Ashburn,241 ms,5.9
+107.172.82.74,2053,true,US,SJC,San Jose,182 ms,6.3
+5.161.21.130,2053,true,US,IAD,Ashburn,252 ms,5.6
+5.161.131.144,2053,true,US,IAD,Ashburn,232 ms,5.6
+107.174.250.42,2053,true,US,ORD,Chicago,238 ms,5.3
+107.173.148.41,2053,true,US,SJC,San Jose,193 ms,5.3
+164.92.107.53,8443,true,US,SJC,San Jose,185 ms,5.9
+107.172.98.29,8443,true,US,SJC,San Jose,185 ms,5.7
+107.173.148.41,8443,true,US,SJC,San Jose,187 ms,5.7
+138.68.44.154,8443,true,US,SJC,San Jose,183 ms,5.4
+24.199.69.168,8443,true,US,SJC,San Jose,181 ms,5.3
+45.139.193.40,443,true,US,SJC,San Jose,157 ms,7.2
+23.94.211.148,443,true,US,SEA,Seattle,204 ms,6.6
+5.161.128.98,443,true,US,IAD,Ashburn,245 ms,6.1
+38.175.195.197,443,true,US,SEA,Seattle,215 ms,6.0
+5.78.51.6,443,true,US,SEA,Seattle,200 ms,6.0
