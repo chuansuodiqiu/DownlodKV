@@ -1,18 +1,17 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-154.21.193.39,2053,true,US,LAX,Los Angeles,196 ms,7.0
-178.156.134.126,2053,true,US,IAD,Ashburn,253 ms,5.6
-142.171.59.153,2053,true,US,LAX,Los Angeles,189 ms,4.9
-148.135.40.161,2053,true,US,LAX,Los Angeles,195 ms,4.5
-134.209.166.201,2053,true,US,EWR,Newark,251 ms,3.9
-146.235.211.70,2083,true,US,SJC,San Jose,202 ms,3.9
-148.135.107.122,2096,true,US,LAX,Los Angeles,194 ms,5.0
-154.21.90.142,8443,true,US,LAX,Los Angeles,178 ms,6.8
-104.224.177.224,8443,true,US,LAX,Los Angeles,174 ms,6.1
-148.135.114.245,8443,true,US,LAX,Los Angeles,192 ms,5.8
-155.138.217.97,8443,true,US,ATL,Atlanta,239 ms,5.7
-165.1.79.60,8443,true,US,SJC,San Jose,194 ms,5.6
-104.245.12.55,443,true,US,SJC,San Jose,159 ms,7.3
-154.40.39.232,443,true,US,LAX,Los Angeles,179 ms,7.2
-148.135.46.46,443,true,US,LAX,Los Angeles,196 ms,6.8
-154.12.48.176,443,true,US,LAX,Los Angeles,183 ms,6.7
-149.248.7.208,443,true,US,LAX,Los Angeles,197 ms,6.6
+154.21.193.39,2053,true,US,LAX,Los Angeles,245 ms,6.6
+198.46.131.76,2053,true,CA,YYZ,Toronto,266 ms,6.4
+148.135.40.161,2053,true,US,LAX,Los Angeles,244 ms,4.2
+159.203.186.142,2053,true,US,EWR,Newark,273 ms,4.0
+146.235.211.70,2083,true,US,SJC,San Jose,185 ms,4.3
+148.135.107.122,2096,true,US,LAX,Los Angeles,191 ms,3.7
+154.21.193.39,8443,true,US,LAX,Los Angeles,192 ms,6.8
+154.21.90.142,8443,true,US,LAX,Los Angeles,176 ms,6.7
+80.251.215.204,8443,true,US,LAX,Los Angeles,171 ms,6.6
+149.28.80.8,8443,true,US,LAX,Los Angeles,188 ms,6.4
+154.7.179.76,8443,true,US,LAX,Los Angeles,188 ms,6.2
+104.245.12.55,443,true,US,SJC,San Jose,156 ms,7.3
+154.23.240.58,443,true,US,LAX,Los Angeles,187 ms,7.2
+154.40.39.232,443,true,US,LAX,Los Angeles,173 ms,7.1
+154.12.48.176,443,true,US,LAX,Los Angeles,179 ms,6.8
+142.171.233.183,443,true,US,LAX,Los Angeles,193 ms,6.6
