@@ -1,17 +1,17 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-104.167.196.124,2053,true,US,MIA,Miami,265 ms,5.6
-148.135.40.161,2053,true,US,LAX,Los Angeles,193 ms,5.1
-148.135.94.110,2053,true,US,LAX,Los Angeles,190 ms,4.7
-23.94.61.68,2053,true,US,SEA,Seattle,216 ms,4.6
-178.156.134.126,2053,true,US,IAD,Ashburn,250 ms,4.3
-146.235.211.70,2083,true,US,SJC,San Jose,183 ms,3.4
-154.21.90.142,8443,true,US,LAX,Los Angeles,172 ms,6.8
-74.48.85.42,8443,true,US,LAX,Los Angeles,193 ms,6.1
-148.135.80.71,8443,true,US,LAX,Los Angeles,184 ms,5.9
-64.64.228.98,8443,true,US,LAX,Los Angeles,180 ms,5.6
-154.7.179.76,8443,true,US,LAX,Los Angeles,191 ms,5.3
-154.12.48.176,443,true,US,LAX,Los Angeles,172 ms,7.3
-154.9.248.216,443,true,US,LAX,Los Angeles,174 ms,7.2
-154.40.39.232,443,true,US,LAX,Los Angeles,186 ms,6.8
-104.245.12.55,443,true,US,SJC,San Jose,159 ms,6.5
-154.23.240.58,443,true,US,LAX,Los Angeles,174 ms,6.2
+142.171.59.153,2053,true,US,LAX,Los Angeles,241 ms,5.3
+24.199.104.112,2053,true,US,SJC,San Jose,239 ms,4.8
+192.210.213.19,2053,true,US,ATL,Atlanta,280 ms,4.2
+137.184.133.171,2053,true,US,EWR,Newark,280 ms,3.3
+146.235.211.70,2083,true,US,SJC,San Jose,199 ms,4.2
+148.135.107.122,2096,true,US,LAX,Los Angeles,187 ms,6.8
+154.21.90.142,8443,true,US,LAX,Los Angeles,183 ms,6.9
+80.251.215.204,8443,true,US,LAX,Los Angeles,173 ms,5.9
+64.64.228.98,8443,true,US,LAX,Los Angeles,175 ms,5.7
+148.135.62.146,8443,true,US,LAX,Los Angeles,190 ms,5.7
+142.171.137.37,8443,true,US,LAX,Los Angeles,218 ms,5.7
+154.12.48.176,443,true,US,LAX,Los Angeles,188 ms,7.1
+173.242.123.213,443,true,US,LAX,Los Angeles,172 ms,6.8
+104.245.12.55,443,true,US,SJC,San Jose,158 ms,6.6
+154.9.204.192,443,true,US,LAX,Los Angeles,178 ms,6.1
+104.194.91.229,443,true,US,LAX,Los Angeles,176 ms,6.0
