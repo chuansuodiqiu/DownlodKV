@@ -1,19 +1,20 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-154.21.193.39,2053,true,US,LAX,Los Angeles,214 ms,6.7
-144.126.222.173,2053,true,US,SJC,San Jose,184 ms,6.4
-64.64.228.98,2053,true,US,LAX,Los Angeles,177 ms,5.6
-24.199.104.112,2053,true,US,SJC,San Jose,196 ms,5.2
-206.189.195.4,2053,true,US,EWR,Newark,266 ms,3.9
-20.33.30.36,2083,true,US,LAX,Los Angeles,262 ms,4.4
-146.235.211.70,2083,true,US,SJC,San Jose,184 ms,4.2
-5.161.131.144,2096,true,US,IAD,Ashburn,245 ms,4.4
-80.251.215.204,8443,true,US,LAX,Los Angeles,174 ms,6.6
-64.64.228.98,8443,true,US,LAX,Los Angeles,171 ms,6.2
-154.21.193.39,8443,true,US,LAX,Los Angeles,214 ms,6.1
-104.224.177.224,8443,true,US,LAX,Los Angeles,178 ms,6.0
-154.21.90.142,8443,true,US,LAX,Los Angeles,170 ms,5.4
-174.137.59.73,443,true,US,SJC,San Jose,199 ms,7.2
-154.9.248.216,443,true,US,LAX,Los Angeles,178 ms,6.6
-154.23.240.58,443,true,US,LAX,Los Angeles,172 ms,6.5
-104.224.186.240,443,true,US,LAX,Los Angeles,177 ms,6.4
-154.9.204.192,443,true,US,LAX,Los Angeles,172 ms,6.3
+142.171.243.243,2053,true,US,LAX,Los Angeles,258 ms,7.3
+107.173.146.46,2053,true,US,SJC,San Jose,259 ms,5.1
+23.94.208.167,2053,true,US,SJC,San Jose,255 ms,4.8
+154.21.193.39,2053,true,US,LAX,Los Angeles,259 ms,4.7
+148.135.68.228,2053,true,US,LAX,Los Angeles,257 ms,4.4
+146.235.211.70,2083,true,US,SJC,San Jose,243 ms,3.8
+23.95.247.225,2087,true,US,SJC,San Jose,182 ms,4.5
+148.135.107.122,2096,true,US,LAX,Los Angeles,183 ms,4.7
+5.161.131.144,2096,true,US,IAD,Ashburn,253 ms,4.1
+154.21.90.142,8443,true,US,LAX,Los Angeles,179 ms,7.5
+80.251.215.204,8443,true,US,LAX,Los Angeles,173 ms,7.4
+107.172.98.6,8443,true,US,LAX,Los Angeles,188 ms,6.9
+154.21.193.39,8443,true,US,LAX,Los Angeles,224 ms,6.7
+149.28.80.8,8443,true,US,LAX,Los Angeles,208 ms,6.1
+173.242.123.213,443,true,US,LAX,Los Angeles,181 ms,7.6
+154.9.248.216,443,true,US,LAX,Los Angeles,176 ms,7.4
+104.224.186.240,443,true,US,LAX,Los Angeles,174 ms,7.1
+154.40.39.232,443,true,US,LAX,Los Angeles,181 ms,6.9
+154.12.48.176,443,true,US,LAX,Los Angeles,176 ms,6.8
