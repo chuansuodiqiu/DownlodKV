@@ -1,23 +1,16 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-154.21.193.39,2053,true,US,LAX,Los Angeles,192 ms,6.3
-144.126.222.173,2053,true,US,SJC,San Jose,181 ms,5.5
-180.131.145.0,2053,true,US,PDX,Portland,264 ms,4.9
-206.238.236.102,2053,true,US,SJC,San Jose,181 ms,4.8
-5.161.21.130,2053,true,US,IAD,Ashburn,253 ms,4.5
-206.238.236.156,2083,true,US,SJC,San Jose,241 ms,6.3
-107.172.96.205,2087,true,US,SJC,San Jose,190 ms,4.9
-206.238.237.174,2096,true,US,SJC,San Jose,277 ms,7.6
-206.238.237.37,2096,true,US,SJC,San Jose,282 ms,6.6
-148.135.107.122,2096,true,US,LAX,Los Angeles,194 ms,5.7
-154.218.15.117,2096,true,US,SJC,San Jose,206 ms,5.3
-45.205.0.196,2096,true,US,SJC,San Jose,270 ms,5.1
-206.238.236.206,8443,true,US,SJC,San Jose,177 ms,7.3
-80.251.215.204,8443,true,US,LAX,Los Angeles,171 ms,7.2
-206.238.236.27,8443,true,US,SJC,San Jose,176 ms,6.4
-142.171.5.233,8443,true,US,LAX,Los Angeles,187 ms,5.8
-74.48.138.229,8443,true,US,LAX,Los Angeles,193 ms,5.6
-173.242.123.213,443,true,US,LAX,Los Angeles,176 ms,7.5
-172.96.224.233,443,true,US,LAX,Los Angeles,190 ms,7.0
-154.9.204.31,443,true,US,LAX,Los Angeles,176 ms,6.9
-154.9.248.216,443,true,US,LAX,Los Angeles,181 ms,6.9
-154.17.228.150,443,true,US,LAX,Los Angeles,173 ms,6.8
+206.238.236.226,2053,true,US,SJC,San Jose,180 ms,3.7
+103.184.44.113,2053,true,US,SJC,San Jose,185 ms,3.0
+206.238.236.169,2053,true,US,SJC,San Jose,280 ms,2.8
+206.238.236.31,2053,true,US,SJC,San Jose,213 ms,2.7
+206.238.236.132,2053,true,US,SJC,San Jose,204 ms,2.6
+148.135.107.122,2096,true,US,LAX,Los Angeles,190 ms,2.0
+144.126.216.189,8443,true,US,SJC,San Jose,175 ms,2.4
+64.64.253.120,8443,true,US,LAX,Los Angeles,176 ms,2.3
+154.26.238.84,8443,true,US,LAX,Los Angeles,159 ms,2.1
+66.103.198.145,8443,true,US,LAX,Los Angeles,186 ms,2.0
+154.9.248.216,443,true,US,LAX,Los Angeles,175 ms,3.1
+38.147.160.170,443,true,US,LAX,Los Angeles,173 ms,3.0
+216.24.181.231,443,true,US,LAX,Los Angeles,168 ms,2.8
+38.147.161.124,443,true,US,LAX,Los Angeles,176 ms,2.8
+173.242.124.213,443,true,US,LAX,Los Angeles,189 ms,2.7
