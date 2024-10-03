@@ -1,31 +1,14 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-156.238.19.70,2053,true,US,SJC,San Jose,181 ms,7.3
-154.218.15.153,2053,true,US,SJC,San Jose,200 ms,6.5
-154.218.15.222,2053,true,US,SJC,San Jose,220 ms,6.1
-107.172.82.74,2053,true,US,SJC,San Jose,178 ms,5.5
-155.138.217.97,2053,true,US,ATL,Atlanta,248 ms,5.4
-206.238.236.111,2083,true,US,SJC,San Jose,234 ms,7.5
-206.238.236.210,2083,true,US,SJC,San Jose,205 ms,7.3
-156.238.19.92,2083,true,US,SJC,San Jose,247 ms,7.3
-206.238.236.201,2083,true,US,SJC,San Jose,258 ms,6.9
-154.218.15.63,2083,true,US,SJC,San Jose,240 ms,6.9
-154.218.15.182,2087,true,US,SJC,San Jose,257 ms,7.7
-154.218.15.125,2087,true,US,SJC,San Jose,204 ms,7.6
-154.218.15.102,2087,true,US,SJC,San Jose,189 ms,7.6
-156.238.18.0,2087,true,US,SJC,San Jose,192 ms,7.6
-206.238.236.144,2087,true,US,SJC,San Jose,240 ms,7.3
-154.218.15.90,2096,true,US,SJC,San Jose,179 ms,7.5
-154.218.15.88,2096,true,US,SJC,San Jose,255 ms,7.3
-154.218.15.30,2096,true,US,SJC,San Jose,179 ms,6.4
-154.218.15.230,2096,true,US,SJC,San Jose,292 ms,6.3
-154.218.15.102,2096,true,US,SJC,San Jose,251 ms,6.2
-154.218.15.71,8443,true,US,SJC,San Jose,231 ms,7.1
-154.21.193.39,8443,true,US,LAX,Los Angeles,202 ms,7.0
-154.218.15.174,8443,true,US,SJC,San Jose,236 ms,6.4
-142.171.234.234,8443,true,US,LAX,Los Angeles,208 ms,6.4
-156.238.19.99,8443,true,US,SJC,San Jose,185 ms,6.2
-104.160.32.161,443,true,US,LAX,Los Angeles,209 ms,7.5
-154.40.39.232,443,true,US,LAX,Los Angeles,192 ms,7.2
-154.12.48.176,443,true,US,LAX,Los Angeles,202 ms,7.1
-154.23.240.58,443,true,US,LAX,Los Angeles,181 ms,7.0
-154.9.240.99,443,true,US,LAX,Los Angeles,194 ms,6.9
+154.21.193.39,2053,true,US,LAX,Los Angeles,193 ms,6.5
+148.135.40.161,2053,true,US,LAX,Los Angeles,199 ms,5.6
+142.171.251.179,2053,true,US,LAX,Los Angeles,216 ms,5.1
+66.103.198.145,8443,true,US,LAX,Los Angeles,202 ms,6.5
+154.21.193.39,8443,true,US,LAX,Los Angeles,185 ms,6.4
+104.224.177.224,8443,true,US,LAX,Los Angeles,176 ms,5.9
+64.64.253.120,8443,true,US,LAX,Los Angeles,173 ms,5.7
+155.138.217.97,8443,true,US,ATL,Atlanta,240 ms,5.5
+154.9.248.216,443,true,US,LAX,Los Angeles,175 ms,7.3
+173.242.123.213,443,true,US,LAX,Los Angeles,175 ms,7.2
+172.98.14.78,443,true,US,LAX,Los Angeles,209 ms,7.2
+154.9.204.31,443,true,US,LAX,Los Angeles,168 ms,7.1
+154.17.228.150,443,true,US,LAX,Los Angeles,172 ms,6.9
