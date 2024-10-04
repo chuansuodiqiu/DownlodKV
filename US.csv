@@ -1,17 +1,19 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-23.94.180.114,2053,true,US,LAX,Los Angeles,196 ms,4.2
-165.227.73.88,2053,true,US,EWR,Newark,264 ms,4.0
-167.99.238.22,2053,true,US,EWR,Newark,249 ms,3.7
-23.94.61.68,2053,true,US,SEA,Seattle,213 ms,3.6
-206.189.195.4,2053,true,US,EWR,Newark,249 ms,3.4
-148.135.107.122,2096,true,US,LAX,Los Angeles,186 ms,5.6
-142.171.30.214,8443,true,US,LAX,Los Angeles,196 ms,6.6
-64.64.253.120,8443,true,US,LAX,Los Angeles,181 ms,6.1
-142.171.65.185,8443,true,US,LAX,Los Angeles,195 ms,5.8
-148.135.17.232,8443,true,US,LAX,Los Angeles,197 ms,5.3
-198.46.158.171,8443,true,US,SJC,San Jose,196 ms,5.3
-173.242.123.213,443,true,US,LAX,Los Angeles,180 ms,7.8
-154.9.204.31,443,true,US,LAX,Los Angeles,173 ms,7.1
-154.17.228.150,443,true,US,LAX,Los Angeles,177 ms,6.3
-148.135.102.88,443,true,US,LAX,Los Angeles,208 ms,6.2
-154.21.206.202,443,true,US,LAX,Los Angeles,192 ms,6.2
+38.180.40.75,2053,true,US,TPA,Tampa,263 ms,4.0
+184.174.96.64,2053,true,US,IAD,Ashburn,275 ms,3.6
+20.25.205.37,2053,true,US,ORD,Chicago,251 ms,3.4
+23.94.61.68,2053,true,US,SEA,Seattle,230 ms,3.2
+165.227.65.148,2053,true,US,EWR,Newark,250 ms,3.1
+20.33.30.36,2083,true,US,LAX,Los Angeles,277 ms,6.3
+146.190.72.91,2087,true,US,EWR,Newark,266 ms,3.3
+5.161.131.144,2096,true,US,IAD,Ashburn,272 ms,5.8
+154.21.193.39,8443,true,US,LAX,Los Angeles,222 ms,6.7
+154.7.179.76,8443,true,US,LAX,Los Angeles,184 ms,6.2
+64.64.253.120,8443,true,US,LAX,Los Angeles,176 ms,5.8
+149.28.255.16,8443,true,US,DFW,Dallas,229 ms,5.3
+159.203.186.142,8443,true,US,EWR,Newark,274 ms,4.8
+173.242.123.213,443,true,US,LAX,Los Angeles,169 ms,7.5
+154.17.228.150,443,true,US,LAX,Los Angeles,173 ms,6.7
+154.9.204.31,443,true,US,LAX,Los Angeles,173 ms,6.7
+154.23.240.58,443,true,US,LAX,Los Angeles,175 ms,6.4
+172.82.16.99,443,true,US,SJC,San Jose,176 ms,6.1
