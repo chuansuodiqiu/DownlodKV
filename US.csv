@@ -1,25 +1,10 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-198.46.131.76,2053,true,CA,YYZ,Toronto,256 ms,5.9
-23.94.61.68,2053,true,US,SEA,Seattle,205 ms,5.2
-104.167.196.124,2053,true,US,MIA,Miami,257 ms,5.2
-24.199.69.168,2053,true,US,SJC,San Jose,200 ms,4.8
-23.94.180.114,2053,true,US,LAX,Los Angeles,195 ms,4.7
-20.33.30.36,2083,true,US,LAX,Los Angeles,224 ms,6.1
-206.238.237.132,2083,true,US,SJC,San Jose,293 ms,4.6
-206.238.236.177,2083,true,US,SJC,San Jose,288 ms,4.3
-146.190.72.91,2087,true,US,EWR,Newark,266 ms,3.6
-107.172.96.205,2087,true,US,SJC,San Jose,191 ms,3.2
-148.135.107.122,2096,true,US,LAX,Los Angeles,187 ms,5.3
-91.124.127.110,2096,true,US,SJC,San Jose,184 ms,4.4
-5.161.131.144,2096,true,US,IAD,Ashburn,249 ms,3.5
-129.80.188.174,2096,true,US,IAD,Ashburn,252 ms,3.1
-142.171.30.214,8443,true,US,LAX,Los Angeles,184 ms,5.4
-142.171.137.37,8443,true,US,LAX,Los Angeles,244 ms,5.0
-142.171.113.131,8443,true,US,LAX,Los Angeles,234 ms,4.9
-135.148.11.66,8443,true,US,IAD,Ashburn,270 ms,4.7
-64.64.253.120,8443,true,US,LAX,Los Angeles,187 ms,4.7
-172.96.224.233,443,true,US,LAX,Los Angeles,190 ms,6.3
-149.248.7.208,443,true,US,LAX,Los Angeles,198 ms,6.2
-144.126.147.42,443,true,US,SEA,Seattle,233 ms,5.9
-154.9.204.31,443,true,US,LAX,Los Angeles,175 ms,5.9
-104.194.91.229,443,true,US,LAX,Los Angeles,179 ms,5.7
+206.238.236.95,2083,true,US,SJC,San Jose,209 ms,2.6
+154.218.15.72,8443,true,US,SJC,San Jose,204 ms,3.3
+64.64.253.120,8443,true,US,LAX,Los Angeles,205 ms,2.4
+104.224.177.224,8443,true,US,LAX,Los Angeles,177 ms,2.2
+154.9.204.192,443,true,US,LAX,Los Angeles,173 ms,2.8
+172.82.16.99,443,true,US,SJC,San Jose,176 ms,2.7
+154.17.228.150,443,true,US,LAX,Los Angeles,161 ms,2.6
+104.194.91.229,443,true,US,LAX,Los Angeles,188 ms,2.6
+104.224.186.240,443,true,US,LAX,Los Angeles,187 ms,2.5
