@@ -1,12 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-64.64.228.98,2053,true,US,LAX,Los Angeles,174 ms,2.7
-80.251.215.204,8443,true,US,LAX,Los Angeles,176 ms,2.7
-154.26.238.84,8443,true,US,LAX,Los Angeles,164 ms,2.6
-64.64.253.120,8443,true,US,LAX,Los Angeles,177 ms,2.6
-64.64.228.98,8443,true,US,LAX,Los Angeles,174 ms,2.4
-142.171.137.37,8443,true,US,LAX,Los Angeles,195 ms,2.4
-154.9.204.31,443,true,US,LAX,Los Angeles,181 ms,2.7
-216.24.181.231,443,true,US,LAX,Los Angeles,181 ms,2.6
-104.194.91.229,443,true,US,LAX,Los Angeles,178 ms,2.6
-101.133.234.172,443,true,US,IAD,Ashburn,40 ms,2.5
-199.19.109.64,443,true,US,LAX,Los Angeles,174 ms,2.5
+64.64.253.120,8443,true,US,LAX,Los Angeles,172 ms,2.8
+64.64.228.98,8443,true,US,LAX,Los Angeles,177 ms,2.7
+80.251.215.204,8443,true,US,LAX,Los Angeles,176 ms,2.6
+154.26.238.84,8443,true,US,LAX,Los Angeles,162 ms,2.5
+142.171.137.37,8443,true,US,LAX,Los Angeles,184 ms,2.0
+101.133.234.172,443,true,US,IAD,Ashburn,39 ms,2.8
+104.194.84.243,443,true,US,LAX,Los Angeles,173 ms,2.6
+213.183.48.227,443,true,RU,DME,Moscow,158 ms,2.6
+104.194.91.229,443,true,US,LAX,Los Angeles,170 ms,2.6
+154.9.248.216,443,true,US,LAX,Los Angeles,171 ms,2.6
