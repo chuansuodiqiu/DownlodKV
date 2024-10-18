@@ -1,22 +1,21 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-64.64.228.98,2053,true,US,LAX,Los Angeles,169 ms,6.6
-74.48.124.7,2053,true,US,LAX,Los Angeles,213 ms,6.3
-142.171.251.179,2053,true,US,LAX,Los Angeles,188 ms,6.0
-206.189.195.4,2053,true,US,EWR,Newark,267 ms,3.8
-20.33.30.36,2083,true,US,LAX,Los Angeles,192 ms,5.9
-152.70.155.147,2083,true,US,LAX,Los Angeles,204 ms,5.8
-5.161.131.144,2083,true,US,IAD,Ashburn,262 ms,3.1
-146.190.72.91,2087,true,US,EWR,Newark,261 ms,4.4
-107.172.96.205,2087,true,US,SJC,San Jose,186 ms,4.0
-148.135.107.122,2096,true,US,LAX,Los Angeles,204 ms,4.8
-152.70.155.147,2096,true,US,LAX,Los Angeles,216 ms,4.5
-64.64.228.98,8443,true,US,LAX,Los Angeles,168 ms,6.5
-66.103.198.145,8443,true,US,LAX,Los Angeles,184 ms,6.2
-142.171.65.185,8443,true,US,LAX,Los Angeles,197 ms,5.5
-24.199.69.168,8443,true,US,SJC,San Jose,193 ms,5.3
-148.135.17.232,8443,true,US,LAX,Los Angeles,186 ms,5.0
-38.147.160.121,443,true,US,LAX,Los Angeles,174 ms,7.8
-173.242.123.213,443,true,US,LAX,Los Angeles,168 ms,7.8
-38.147.160.227,443,true,US,LAX,Los Angeles,177 ms,7.7
-154.9.248.216,443,true,US,LAX,Los Angeles,179 ms,7.6
-154.40.39.232,443,true,US,LAX,Los Angeles,171 ms,7.6
+5.161.131.144,2053,true,US,IAD,Ashburn,267 ms,6.5
+64.64.228.98,2053,true,US,LAX,Los Angeles,182 ms,6.2
+23.95.67.107,2053,true,US,SJC,San Jose,184 ms,5.6
+142.171.251.179,2053,true,US,LAX,Los Angeles,230 ms,5.4
+35.226.250.3,2053,true,US,ORD,Chicago,228 ms,5.0
+5.161.131.144,2083,true,US,IAD,Ashburn,240 ms,5.6
+107.172.96.205,2087,true,US,SJC,San Jose,182 ms,5.6
+148.135.107.122,2096,true,US,LAX,Los Angeles,187 ms,6.4
+5.161.131.144,2096,true,US,IAD,Ashburn,241 ms,4.5
+3.18.162.191,2096,true,US,IAD,Ashburn,240 ms,3.7
+80.251.215.204,8443,true,US,LAX,Los Angeles,173 ms,6.3
+66.103.198.145,8443,true,US,LAX,Los Angeles,194 ms,6.2
+64.64.253.120,8443,true,US,LAX,Los Angeles,170 ms,5.6
+148.135.17.232,8443,true,US,LAX,Los Angeles,184 ms,5.6
+107.173.148.41,8443,true,US,SJC,San Jose,179 ms,5.2
+173.242.123.213,443,true,US,LAX,Los Angeles,169 ms,7.8
+154.40.39.232,443,true,US,LAX,Los Angeles,180 ms,7.1
+154.9.204.192,443,true,US,LAX,Los Angeles,172 ms,6.7
+154.9.240.99,443,true,US,LAX,Los Angeles,189 ms,6.4
+38.147.160.170,443,true,US,LAX,Los Angeles,173 ms,6.2
