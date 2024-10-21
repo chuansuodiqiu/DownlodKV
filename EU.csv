@@ -1,14 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-13.60.115.44,2053,true,SE,ARN,Stockholm,244 ms,5.7
-15.188.202.197,2083,true,FR,CDG,Paris,216 ms,6.4
-13.53.81.150,2083,true,SE,ARN,Stockholm,250 ms,6.2
-51.107.9.31,8443,true,IT,MXP,Milan,223 ms,6.1
-45.67.230.65,8443,true,RU,DME,Moscow,256 ms,6.0
-13.60.115.44,8443,true,SE,ARN,Stockholm,245 ms,5.4
-13.50.173.22,8443,true,SE,ARN,Stockholm,250 ms,5.3
-57.129.53.184,8443,true,DE,FRA,Frankfurt,300 ms,5.1
-45.138.74.182,443,true,DE,FRA,Frankfurt,225 ms,6.2
-87.228.9.243,443,true,NL,AMS,Amsterdam,229 ms,5.7
-5.42.106.225,443,true,DE,FRA,Frankfurt,237 ms,5.7
-89.208.103.100,443,true,DE,FRA,Frankfurt,226 ms,5.7
-213.183.48.227,443,true,GB,LHR,London,159 ms,5.5
+37.221.126.43,2053,true,SE,ARN,Stockholm,242 ms,4.9
+15.188.202.197,2083,true,FR,CDG,Paris,209 ms,5.2
+16.171.58.167,8443,true,NL,AMS,Amsterdam,230 ms,6.1
+94.131.112.25,8443,true,NL,AMS,Amsterdam,221 ms,5.5
+18.185.239.85,8443,true,DE,FRA,Frankfurt,199 ms,5.4
+13.50.173.22,8443,true,SE,ARN,Stockholm,226 ms,5.0
+137.74.151.70,8443,true,FR,CDG,Paris,295 ms,5.0
+213.183.48.227,443,true,GB,MAN,Manchester,162 ms,6.5
+88.218.248.195,443,true,NL,AMS,Amsterdam,234 ms,6.1
+89.208.103.232,443,true,DE,FRA,Frankfurt,217 ms,4.9
