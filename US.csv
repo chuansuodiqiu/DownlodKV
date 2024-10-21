@@ -1,24 +1,20 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-5.161.131.144,2053,true,US,IAD,Ashburn,247 ms,6.2
-23.95.67.107,2053,true,US,SJC,San Jose,188 ms,5.4
-198.12.120.132,2053,true,US,SJC,San Jose,196 ms,5.1
-148.135.68.228,2053,true,US,LAX,Los Angeles,202 ms,5.0
-104.167.196.124,2053,true,US,MIA,Miami,266 ms,4.4
-152.70.155.147,2083,true,US,LAX,Los Angeles,240 ms,5.9
-5.161.131.144,2083,true,US,IAD,Ashburn,274 ms,5.6
-20.33.30.36,2083,true,US,LAX,Los Angeles,231 ms,5.2
-107.172.96.205,2087,true,US,SJC,San Jose,184 ms,6.1
-152.70.155.147,2087,true,US,LAX,Los Angeles,221 ms,5.1
-23.95.247.225,2087,true,US,SJC,San Jose,186 ms,4.7
-148.135.107.122,2096,true,US,LAX,Los Angeles,206 ms,5.2
-152.70.155.147,2096,true,US,LAX,Los Angeles,215 ms,4.1
-154.26.238.84,8443,true,US,LAX,Los Angeles,160 ms,7.6
-66.103.198.145,8443,true,US,LAX,Los Angeles,184 ms,6.7
-64.64.253.120,8443,true,US,LAX,Los Angeles,171 ms,6.1
-104.224.177.224,8443,true,US,LAX,Los Angeles,168 ms,6.1
-142.171.30.214,8443,true,US,LAX,Los Angeles,203 ms,5.9
-43.153.103.203,443,true,US,SJC,San Jose,183 ms,8.3
-43.153.80.208,443,true,US,SJC,San Jose,183 ms,7.4
-66.154.116.165,443,true,US,LAX,Los Angeles,195 ms,7.2
-74.48.44.142,443,true,US,LAX,Los Angeles,202 ms,7.2
-207.2.120.15,443,true,US,SJC,San Jose,196 ms,7.0
+23.95.67.107,2053,true,US,SJC,San Jose,180 ms,6.1
+198.12.120.132,2053,true,US,SJC,San Jose,185 ms,5.7
+104.167.196.124,2053,true,US,MIA,Miami,246 ms,4.4
+134.209.166.201,2053,true,US,EWR,Newark,262 ms,4.1
+107.172.190.130,2053,true,US,BUF,Buffalo,242 ms,4.0
+20.33.30.36,2083,true,US,LAX,Los Angeles,199 ms,6.0
+23.95.247.225,2087,true,US,SJC,San Jose,208 ms,5.7
+107.172.96.205,2087,true,US,SJC,San Jose,179 ms,4.8
+148.135.107.122,2096,true,US,LAX,Los Angeles,204 ms,6.1
+66.103.198.145,8443,true,US,LAX,Los Angeles,182 ms,6.6
+104.224.177.224,8443,true,US,LAX,Los Angeles,173 ms,5.8
+154.26.238.84,8443,true,US,LAX,Los Angeles,162 ms,5.6
+137.220.34.134,8443,true,US,SEA,Seattle,223 ms,5.4
+142.171.30.214,8443,true,US,LAX,Los Angeles,195 ms,5.2
+141.11.208.77,443,true,US,LAX,Los Angeles,186 ms,7.3
+43.153.80.208,443,true,US,SJC,San Jose,174 ms,7.3
+154.9.240.99,443,true,US,LAX,Los Angeles,182 ms,7.0
+148.135.56.163,443,true,US,LAX,Los Angeles,192 ms,6.8
+104.224.186.240,443,true,US,LAX,Los Angeles,170 ms,6.6
