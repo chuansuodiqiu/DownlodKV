@@ -1,29 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-206.238.236.138,2053,true,US,SJC,San Jose,184 ms,7.2
-154.218.15.126,2053,true,US,SJC,San Jose,272 ms,6.7
-206.238.236.126,2053,true,US,SJC,San Jose,179 ms,6.0
-103.184.45.42,2053,true,US,SJC,San Jose,182 ms,5.9
-142.171.59.153,2053,true,US,LAX,Los Angeles,190 ms,5.9
-206.238.236.235,2083,true,US,SJC,San Jose,212 ms,7.1
-45.205.0.21,2083,true,US,SJC,San Jose,211 ms,6.9
-154.218.15.193,2083,true,US,SJC,San Jose,178 ms,6.5
-154.218.15.113,2083,true,US,SJC,San Jose,175 ms,5.7
-206.238.237.94,2087,true,US,SJC,San Jose,180 ms,7.6
-45.205.0.88,2087,true,US,SJC,San Jose,180 ms,7.2
-45.205.0.75,2087,true,US,SJC,San Jose,184 ms,6.6
-206.238.237.206,2087,true,US,SJC,San Jose,177 ms,5.5
-154.218.15.50,2096,true,US,SJC,San Jose,180 ms,7.9
-206.238.236.41,2096,true,US,SJC,San Jose,253 ms,7.6
-45.205.0.131,2096,true,US,SJC,San Jose,268 ms,7.5
-206.238.236.129,2096,true,US,SJC,San Jose,183 ms,7.1
-206.238.236.186,2096,true,US,SJC,San Jose,184 ms,6.6
-154.26.238.84,8443,true,US,LAX,Los Angeles,158 ms,7.4
-103.184.45.126,8443,true,US,SJC,San Jose,231 ms,7.3
-45.205.0.124,8443,true,US,SJC,San Jose,228 ms,6.9
-146.190.33.224,8443,true,US,SJC,San Jose,198 ms,6.7
-64.64.253.120,8443,true,US,LAX,Los Angeles,189 ms,6.0
-154.40.39.232,443,true,US,LAX,Los Angeles,179 ms,7.4
-154.17.228.150,443,true,US,LAX,Los Angeles,175 ms,7.3
-104.224.186.240,443,true,US,LAX,Los Angeles,185 ms,7.0
-154.9.240.99,443,true,US,LAX,Los Angeles,187 ms,6.8
-104.194.91.229,443,true,US,LAX,Los Angeles,173 ms,6.6
+154.26.238.84,8443,true,US,LAX,Los Angeles,205 ms,7.3
+135.148.11.66,8443,true,US,IAD,Ashburn,282 ms,5.6
+64.64.253.120,8443,true,US,LAX,Los Angeles,179 ms,5.5
+107.172.50.178,8443,true,US,BUF,Buffalo,255 ms,5.3
+104.168.82.140,8443,true,US,SEA,Seattle,208 ms,5.0
+173.242.123.213,443,true,US,LAX,Los Angeles,171 ms,7.7
+43.153.103.203,443,true,US,SJC,San Jose,180 ms,7.5
+154.40.39.232,443,true,US,LAX,Los Angeles,178 ms,6.8
+162.219.120.218,443,true,US,LAX,Los Angeles,184 ms,6.8
+199.19.106.202,443,true,US,LAX,Los Angeles,169 ms,6.3
