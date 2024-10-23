@@ -1,17 +1,18 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-142.171.228.35,2053,true,US,LAX,Los Angeles,195 ms,4.3
-158.23.81.224,2053,true,US,DFW,Dallas,260 ms,4.3
-167.99.238.22,2053,true,US,EWR,Newark,263 ms,4.2
-148.135.67.18,2053,true,US,LAX,Los Angeles,203 ms,3.8
-159.203.186.142,2053,true,US,EWR,Newark,264 ms,3.7
-148.135.107.122,2096,true,US,LAX,Los Angeles,184 ms,5.8
-142.171.234.234,8443,true,US,LAX,Los Angeles,194 ms,7.3
-142.171.131.17,8443,true,US,LAX,Los Angeles,185 ms,6.8
-80.251.215.204,8443,true,US,LAX,Los Angeles,172 ms,6.2
-142.171.30.214,8443,true,US,LAX,Los Angeles,187 ms,6.1
-154.21.193.39,8443,true,US,LAX,Los Angeles,220 ms,5.6
-173.242.123.213,443,true,US,LAX,Los Angeles,178 ms,7.8
-154.9.248.216,443,true,US,LAX,Los Angeles,181 ms,7.5
-38.147.160.170,443,true,US,LAX,Los Angeles,172 ms,7.4
-104.224.186.240,443,true,US,LAX,Los Angeles,183 ms,7.2
-104.194.91.229,443,true,US,LAX,Los Angeles,183 ms,6.1
+155.138.217.97,2053,true,US,ATL,Atlanta,240 ms,5.5
+148.135.67.18,2053,true,US,LAX,Los Angeles,207 ms,4.0
+134.209.166.201,2053,true,US,EWR,Newark,267 ms,3.5
+159.203.186.142,2053,true,US,EWR,Newark,249 ms,3.2
+20.33.30.36,2083,true,US,LAX,Los Angeles,265 ms,5.1
+23.95.247.225,2087,true,US,SJC,San Jose,182 ms,3.8
+148.135.107.122,2096,true,US,LAX,Los Angeles,189 ms,4.9
+80.251.215.204,8443,true,US,LAX,Los Angeles,172 ms,7.8
+146.190.33.224,8443,true,US,SJC,San Jose,180 ms,7.1
+142.171.131.17,8443,true,US,LAX,Los Angeles,180 ms,6.7
+107.172.235.66,8443,true,US,LAX,Los Angeles,195 ms,6.2
+64.64.253.120,8443,true,US,LAX,Los Angeles,171 ms,6.0
+154.9.248.216,443,true,US,LAX,Los Angeles,186 ms,7.7
+173.242.123.213,443,true,US,LAX,Los Angeles,170 ms,7.5
+154.17.228.150,443,true,US,LAX,Los Angeles,182 ms,6.8
+43.153.80.208,443,true,US,SJC,San Jose,182 ms,6.7
+104.224.186.240,443,true,US,LAX,Los Angeles,183 ms,6.5
