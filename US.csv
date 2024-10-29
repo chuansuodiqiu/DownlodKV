@@ -1,25 +1,25 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-154.21.193.39,2053,true,US,LAX,Los Angeles,295 ms,5.7
-24.199.69.168,2053,true,US,SJC,San Jose,290 ms,5.3
-148.135.112.130,2053,true,US,LAX,Los Angeles,292 ms,4.9
-74.48.179.34,2053,true,US,LAX,Los Angeles,292 ms,4.8
-46.21.159.253,2053,true,US,LAX,Los Angeles,294 ms,4.6
-20.33.30.36,2083,true,US,LAX,Los Angeles,199 ms,5.6
-3.15.147.151,2083,true,US,CMH,Columbus,234 ms,4.7
-15.204.67.30,2083,true,US,PDX,Portland,205 ms,4.6
-5.161.155.58,2083,true,US,IAD,Ashburn,242 ms,3.9
-5.161.131.144,2083,true,US,IAD,Ashburn,273 ms,3.8
-23.95.247.225,2087,true,US,SJC,San Jose,184 ms,5.6
-146.190.72.91,2087,true,US,EWR,Newark,262 ms,3.2
-148.135.107.122,2096,true,US,LAX,Los Angeles,194 ms,5.9
-5.161.131.144,2096,true,US,IAD,Ashburn,277 ms,5.6
-80.251.215.204,8443,true,US,LAX,Los Angeles,175 ms,7.1
-66.103.198.145,8443,true,US,LAX,Los Angeles,182 ms,6.7
-154.21.90.142,8443,true,US,LAX,Los Angeles,171 ms,6.5
-142.171.234.234,8443,true,US,LAX,Los Angeles,186 ms,6.1
-64.64.253.120,8443,true,US,LAX,Los Angeles,170 ms,5.8
-209.237.135.93,443,true,US,ATL,Atlanta,284 ms,6.8
-141.11.210.29,443,true,US,LAX,Los Angeles,213 ms,6.8
-104.194.84.243,443,true,US,LAX,Los Angeles,174 ms,6.5
-142.171.121.29,443,true,US,LAX,Los Angeles,199 ms,6.1
-154.9.240.99,443,true,US,LAX,Los Angeles,193 ms,5.8
+74.48.179.34,2053,true,US,LAX,Los Angeles,191 ms,6.0
+5.161.21.130,2053,true,US,IAD,Ashburn,254 ms,5.6
+148.135.112.130,2053,true,US,LAX,Los Angeles,187 ms,5.5
+154.21.193.39,2053,true,US,LAX,Los Angeles,198 ms,5.4
+142.171.199.114,2053,true,US,LAX,Los Angeles,182 ms,5.0
+5.161.131.144,2083,true,US,IAD,Ashburn,249 ms,6.0
+20.33.30.36,2083,true,US,LAX,Los Angeles,205 ms,5.9
+5.161.155.58,2083,true,US,IAD,Ashburn,244 ms,5.5
+15.204.67.30,2083,true,US,SEA,Seattle,206 ms,5.0
+3.15.147.151,2083,true,US,CMH,Columbus,241 ms,4.0
+23.95.247.225,2087,true,US,SJC,San Jose,182 ms,4.6
+146.190.72.91,2087,true,US,EWR,Newark,267 ms,3.8
+148.135.107.122,2096,true,US,LAX,Los Angeles,178 ms,6.6
+5.161.131.144,2096,true,US,IAD,Ashburn,266 ms,4.2
+80.251.215.204,8443,true,US,LAX,Los Angeles,172 ms,7.6
+66.103.198.145,8443,true,US,LAX,Los Angeles,182 ms,6.2
+142.171.30.214,8443,true,US,LAX,Los Angeles,184 ms,6.0
+148.135.80.71,8443,true,US,LAX,Los Angeles,189 ms,5.7
+64.64.253.120,8443,true,US,LAX,Los Angeles,180 ms,5.4
+154.17.228.150,443,true,US,LAX,Los Angeles,175 ms,7.2
+141.11.210.29,443,true,US,LAX,Los Angeles,220 ms,6.8
+162.219.120.218,443,true,US,LAX,Los Angeles,184 ms,6.7
+154.40.39.232,443,true,US,LAX,Los Angeles,177 ms,6.6
+34.217.119.17,443,true,US,SEA,Seattle,206 ms,6.1
