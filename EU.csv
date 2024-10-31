@@ -1,12 +1,12 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-15.188.202.197,2083,true,FR,CDG,Paris,228 ms,5.5
-84.246.85.33,8443,true,NL,AMS,Amsterdam,263 ms,6.0
-94.131.98.24,8443,true,SE,ARN,Stockholm,238 ms,4.2
-95.164.16.7,8443,true,DE,FRA,Frankfurt,284 ms,3.8
-20.91.225.232,8443,true,SE,ARN,Stockholm,255 ms,3.2
-45.153.230.239,8443,true,DE,FRA,Frankfurt,267 ms,3.0
-45.147.50.154,443,true,DE,FRA,Frankfurt,233 ms,5.3
-3.123.255.167,443,true,DE,FRA,Frankfurt,235 ms,5.2
-193.42.62.191,443,true,DE,FRA,Frankfurt,208 ms,4.8
-70.34.198.182,443,true,DE,FRA,Frankfurt,289 ms,4.8
-45.147.51.230,443,true,DE,FRA,Frankfurt,230 ms,4.7
+130.61.203.115,2053,true,DE,FRA,Frankfurt,277 ms,4.8
+20.91.225.232,2053,true,SE,ARN,Stockholm,258 ms,3.9
+143.47.243.144,2053,true,GB,LHR,London,288 ms,3.9
+207.154.244.121,2053,true,DE,FRA,Frankfurt,296 ms,3.1
+194.87.85.119,8443,true,DE,FRA,Frankfurt,219 ms,3.2
+45.153.230.239,8443,true,DE,FRA,Frankfurt,263 ms,3.0
+213.183.48.227,443,true,NL,AMS,Amsterdam,161 ms,5.2
+217.110.20.141,443,true,DK,CPH,Copenhagen,218 ms,4.5
+45.147.51.230,443,true,DE,FRA,Frankfurt,225 ms,4.3
+141.144.239.214,443,true,FR,CDG,Paris,297 ms,4.3
+94.131.98.31,443,true,SE,ARN,Stockholm,240 ms,4.1
