@@ -1,6 +1,4 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-172.67.184.197,443,true,GB,LHR,London,259 ms,2.5
-172.67.170.30,443,true,GB,LHR,London,257 ms,2.5
-104.21.31.140,443,true,GB,LHR,London,238 ms,2.5
-172.67.166.211,443,true,GB,LHR,London,245 ms,2.2
-172.67.154.176,443,true,GB,LHR,London,235 ms,2.1
+13.60.115.44,2053,true,SE,ARN,Stockholm,249 ms,5.0
+15.188.202.197,2083,true,FR,CDG,Paris,245 ms,5.7
+18.196.92.175,8443,true,DE,FRA,Frankfurt,214 ms,5.3
