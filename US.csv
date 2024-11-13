@@ -1,11 +1,11 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-64.64.228.98,2053,true,US,LAX,Los Angeles,174 ms,2.5
-154.17.230.41,8443,true,US,LAX,Los Angeles,173 ms,2.9
-80.251.213.234,8443,true,US,LAX,Los Angeles,171 ms,2.4
-154.26.238.84,8443,true,US,LAX,Los Angeles,163 ms,2.1
-80.251.215.204,8443,true,US,LAX,Los Angeles,168 ms,2.0
-43.153.80.208,443,true,US,SJC,San Jose,184 ms,3.1
-80.251.210.37,443,true,US,LAX,Los Angeles,176 ms,2.7
-154.9.206.147,443,true,US,LAX,Los Angeles,173 ms,2.7
-172.82.16.99,443,true,US,SJC,San Jose,178 ms,2.5
-154.9.206.198,443,true,US,LAX,Los Angeles,176 ms,2.4
+64.64.228.98,2053,true,US,LAX,Los Angeles,174 ms,2.0
+154.17.230.41,8443,true,US,LAX,Los Angeles,174 ms,2.6
+80.251.213.234,8443,true,US,LAX,Los Angeles,173 ms,2.4
+154.26.238.84,8443,true,US,LAX,Los Angeles,160 ms,2.2
+154.9.239.243,8443,true,US,LAX,Los Angeles,190 ms,2.1
+154.17.228.150,443,true,US,LAX,Los Angeles,168 ms,2.7
+43.153.80.208,443,true,US,SJC,San Jose,182 ms,2.6
+80.251.210.37,443,true,US,LAX,Los Angeles,171 ms,2.4
+154.9.206.198,443,true,US,LAX,Los Angeles,175 ms,2.4
+67.226.221.231,443,true,US,SJC,San Jose,177 ms,2.2
