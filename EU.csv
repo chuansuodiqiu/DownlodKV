@@ -1,13 +1,12 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-37.221.126.43,2053,true,SE,ARN,Stockholm,215 ms,5.8
-23.94.101.139,2053,true,NL,AMS,Amsterdam,281 ms,4.7
-3.71.189.51,2053,true,DE,FRA,Frankfurt,226 ms,4.1
-179.43.156.21,2053,true,IT,MXP,Milan,278 ms,4.1
-18.159.111.125,2053,true,DE,FRA,Frankfurt,229 ms,4.1
-15.188.202.197,2083,true,FR,CDG,Paris,236 ms,3.4
-16.63.233.188,8443,true,IT,MXP,Milan,220 ms,4.4
-15.188.53.52,8443,true,FR,CDG,Paris,229 ms,4.4
-51.107.9.31,8443,true,IT,MXP,Milan,224 ms,4.0
-3.74.9.115,8443,true,DE,FRA,Frankfurt,212 ms,3.6
-18.196.92.175,8443,true,DE,FRA,Frankfurt,228 ms,3.6
-141.105.70.114,443,true,PL,WAW,Warsaw,161 ms,5.6
+143.42.17.72,2053,true,DE,FRA,Frankfurt,265 ms,5.2
+3.71.189.51,2053,true,DE,FRA,Frankfurt,226 ms,5.1
+179.43.156.21,2053,true,IT,MXP,Milan,273 ms,4.2
+18.159.111.125,2053,true,DE,FRA,Frankfurt,239 ms,3.8
+93.185.166.62,2053,true,NL,AMS,Amsterdam,285 ms,3.7
+38.54.122.224,2087,true,FR,MRS,Marseille,236 ms,4.0
+51.107.9.31,8443,true,IT,MXP,Milan,218 ms,5.6
+194.87.85.119,8443,true,DE,FRA,Frankfurt,282 ms,3.8
+103.113.71.76,8443,true,DE,FRA,Frankfurt,291 ms,3.6
+143.47.243.144,8443,true,GB,LHR,London,300 ms,3.0
+213.183.48.227,443,true,NO,OSL,Oslo,155 ms,4.3
