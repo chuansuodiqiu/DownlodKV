@@ -1,11 +1,10 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-18.159.111.125,2053,true,DE,FRA,Frankfurt,223 ms,5.1
-37.221.126.43,2053,true,SE,ARN,Stockholm,227 ms,4.6
-5.45.95.134,2053,true,NL,AMS,Amsterdam,224 ms,4.2
-45.67.230.65,2053,true,RU,DME,Moscow,254 ms,3.0
-13.53.81.150,2083,true,SE,ARN,Stockholm,236 ms,3.6
-185.217.108.43,2087,true,DE,FRA,Frankfurt,162 ms,5.7
-51.107.11.76,8443,true,IT,MXP,Milan,220 ms,5.4
-15.188.53.52,8443,true,FR,CDG,Paris,237 ms,4.4
-5.45.95.134,8443,true,NL,AMS,Amsterdam,239 ms,4.4
-3.66.84.148,8443,true,DE,FRA,Frankfurt,216 ms,3.4
+37.221.126.43,2053,true,SE,ARN,Stockholm,220 ms,4.6
+18.159.111.125,2053,true,DE,FRA,Frankfurt,211 ms,3.7
+141.94.204.68,2053,true,FR,CDG,Paris,287 ms,3.0
+13.53.81.150,2083,true,SE,ARN,Stockholm,246 ms,4.1
+185.217.108.43,2087,true,DE,FRA,Frankfurt,160 ms,8.9
+51.107.11.76,8443,true,IT,MXP,Milan,228 ms,6.2
+15.188.53.52,8443,true,FR,CDG,Paris,227 ms,5.3
+70.34.223.217,8443,true,SE,ARN,Stockholm,291 ms,3.0
+141.105.70.114,443,true,PL,WAW,Warsaw,175 ms,3.9
