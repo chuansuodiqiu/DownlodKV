@@ -1,7 +1,16 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-45.202.113.222,2053,true,US,SJC,San Jose,255 ms,2.7
-45.202.113.166,2087,true,US,SJC,San Jose,183 ms,2.6
-206.238.237.67,8443,true,US,SJC,San Jose,206 ms,2.8
-109.176.239.204,443,true,US,SJC,San Jose,228 ms,3.1
-109.176.239.66,443,true,US,SJC,San Jose,257 ms,2.9
-109.176.239.207,443,true,US,SJC,San Jose,202 ms,2.8
+45.202.113.102,2053,true,US,SJC,San Jose,250 ms,3.1
+216.221.210.132,2083,true,US,SJC,San Jose,300 ms,3.4
+103.184.45.97,2083,true,US,SJC,San Jose,297 ms,3.3
+156.238.19.178,2083,true,US,SJC,San Jose,300 ms,2.8
+206.238.237.240,2087,true,US,SJC,San Jose,185 ms,2.6
+206.238.237.46,2087,true,US,SJC,San Jose,182 ms,2.5
+206.238.236.18,2096,true,US,SJC,San Jose,182 ms,3.0
+206.238.237.113,8443,true,US,SJC,San Jose,228 ms,3.4
+45.202.113.107,8443,true,US,SJC,San Jose,219 ms,3.4
+45.202.113.52,8443,true,US,SJC,San Jose,230 ms,3.2
+109.176.239.123,443,true,US,SJC,San Jose,200 ms,3.3
+109.176.239.84,443,true,US,SJC,San Jose,203 ms,3.2
+109.176.239.171,443,true,US,SJC,San Jose,177 ms,3.2
+109.176.239.95,443,true,US,SJC,San Jose,209 ms,3.0
+109.176.239.61,443,true,US,SJC,San Jose,203 ms,2.5
