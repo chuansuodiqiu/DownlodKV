@@ -1,2 +1,4 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-213.183.48.227,443,true,SE,ARN,Stockholm,192 ms,5.2
+54.151.242.175,8443,true,SG,SIN,Singapore,76 ms,8.8
+52.77.19.190,443,true,SG,SIN,Singapore,76 ms,8.6
+54.255.250.66,443,true,SG,SIN,Singapore,118 ms,8.2
