@@ -1,8 +1,7 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-52.231.97.210,2053,true,KR,ICN,Seoul,124 ms,7.2
-193.123.236.90,2096,true,KR,ICN,Seoul,59 ms,10.0
-146.56.173.130,443,true,KR,ICN,Seoul,59 ms,9.6
+131.186.25.156,2087,true,KR,ICN,Seoul,67 ms,5.4
+193.123.236.90,2096,true,KR,ICN,Seoul,58 ms,9.9
+132.226.175.157,8443,true,KR,ICN,Seoul,66 ms,10.0
 152.70.90.168,443,true,KR,ICN,Seoul,59 ms,9.6
-129.154.207.203,443,true,KR,ICN,Seoul,69 ms,9.5
-146.56.42.14,443,true,KR,ICN,Seoul,65 ms,9.4
-132.145.94.80,443,true,KR,ICN,Seoul,69 ms,9.0
+129.154.207.203,443,true,KR,ICN,Seoul,67 ms,9.5
+132.145.94.80,443,true,KR,ICN,Seoul,68 ms,7.7
