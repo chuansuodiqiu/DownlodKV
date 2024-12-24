@@ -1,19 +1,21 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-160.153.138.160,2053,true,US,SJC,San Jose,189 ms,6.5
-142.171.243.209,2053,true,US,LAX,Los Angeles,209 ms,6.1
-143.198.50.204,2053,true,US,SJC,San Jose,176 ms,5.8
-20.14.73.143,2053,true,US,LAX,Los Angeles,237 ms,4.5
-160.153.138.229,2096,true,US,SJC,San Jose,183 ms,7.5
-206.238.236.190,2096,true,US,SJC,San Jose,282 ms,5.6
-199.34.230.176,2096,true,US,SJC,San Jose,291 ms,4.8
-148.135.107.122,2096,true,US,LAX,Los Angeles,198 ms,4.8
-154.9.239.205,8443,true,US,SJC,San Jose,170 ms,7.1
-103.184.44.117,8443,true,US,SJC,San Jose,247 ms,6.9
-154.17.230.41,8443,true,US,LAX,Los Angeles,163 ms,6.1
-64.64.253.120,8443,true,US,LAX,Los Angeles,171 ms,5.9
-148.135.62.146,8443,true,US,LAX,Los Angeles,199 ms,5.8
-103.184.45.115,443,true,US,SJC,San Jose,204 ms,7.6
-109.176.239.228,443,true,US,SJC,San Jose,197 ms,6.8
-107.175.35.49,443,true,CA,YYZ,Toronto,266 ms,5.4
-103.101.153.32,443,true,US,LAX,Los Angeles,192 ms,5.1
-129.153.223.37,443,true,US,LAX,Los Angeles,219 ms,4.4
+142.171.221.31,2053,true,US,LAX,Los Angeles,217 ms,6.0
+142.171.228.35,2053,true,US,LAX,Los Angeles,194 ms,5.6
+148.135.68.228,2053,true,US,LAX,Los Angeles,194 ms,5.2
+104.167.196.124,2053,true,US,MIA,Miami,255 ms,5.1
+142.171.243.209,2053,true,US,LAX,Los Angeles,193 ms,4.9
+45.205.0.209,2087,true,US,SJC,San Jose,268 ms,8.0
+160.153.138.12,2087,true,US,SJC,San Jose,187 ms,7.3
+156.238.18.114,2087,true,US,SJC,San Jose,209 ms,3.9
+148.135.107.122,2096,true,US,LAX,Los Angeles,186 ms,4.8
+107.173.154.24,2096,true,US,SJC,San Jose,183 ms,4.3
+199.34.228.245,8443,true,US,SJC,San Jose,181 ms,6.6
+154.9.239.205,8443,true,US,SJC,San Jose,176 ms,6.6
+154.17.230.41,8443,true,US,LAX,Los Angeles,165 ms,6.2
+142.171.131.17,8443,true,US,LAX,Los Angeles,185 ms,6.0
+142.171.30.214,8443,true,US,LAX,Los Angeles,185 ms,5.8
+109.176.239.4,443,true,US,SJC,San Jose,270 ms,6.8
+109.176.239.207,443,true,US,SJC,San Jose,295 ms,5.9
+109.176.239.161,443,true,US,SJC,San Jose,224 ms,5.9
+109.176.239.220,443,true,US,SJC,San Jose,180 ms,5.7
+135.84.64.229,443,true,US,SJC,San Jose,279 ms,5.5
