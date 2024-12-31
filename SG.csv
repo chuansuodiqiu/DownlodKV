@@ -1,3 +1,6 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-111.119.235.98,2053,true,SG,SIN,Singapore,82 ms,4.5
-13.250.38.94,443,true,SG,SIN,Singapore,78 ms,8.7
+111.119.235.98,2053,true,SG,SIN,Singapore,95 ms,4.4
+54.151.242.175,8443,true,SG,SIN,Singapore,79 ms,8.5
+13.228.142.218,443,true,SG,SIN,Singapore,105 ms,9.0
+13.250.14.76,443,true,SG,SIN,Singapore,104 ms,7.7
+13.250.38.94,443,true,SG,SIN,Singapore,105 ms,7.4
