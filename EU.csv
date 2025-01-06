@@ -1,13 +1,15 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-5.45.95.134,2053,true,NL,AMS,Amsterdam,229 ms,6.8
-18.159.111.125,2053,true,DE,FRA,Frankfurt,226 ms,6.6
-38.180.233.74,2053,true,NL,AMS,Amsterdam,225 ms,6.5
-3.71.189.51,2053,true,DE,FRA,Frankfurt,223 ms,5.5
-94.131.98.24,8443,true,SE,ARN,Stockholm,248 ms,6.2
-18.153.49.248,8443,true,DE,FRA,Frankfurt,232 ms,6.0
-37.252.13.100,8443,true,NL,AMS,Amsterdam,235 ms,5.7
+3.71.189.51,2053,true,DE,FRA,Frankfurt,219 ms,7.9
+38.180.99.183,2053,true,NL,AMS,Amsterdam,205 ms,6.5
+18.159.111.125,2053,true,DE,FRA,Frankfurt,238 ms,6.5
+13.48.175.183,2053,true,SE,ARN,Stockholm,248 ms,5.6
+94.131.98.24,8443,true,SE,ARN,Stockholm,238 ms,6.4
+5.45.95.134,8443,true,NL,AMS,Amsterdam,231 ms,6.4
+37.252.13.100,8443,true,NL,AMS,Amsterdam,222 ms,6.2
+45.77.62.84,8443,true,FR,CDG,Paris,267 ms,5.3
+38.180.233.74,8443,true,NL,AMS,Amsterdam,213 ms,5.2
+141.105.70.114,443,true,DE,FRA,Frankfurt,159 ms,7.4
 91.205.12.26,443,true,DE,MUC,Munich,257 ms,7.4
-3.64.205.189,443,true,DE,FRA,Frankfurt,226 ms,7.1
-213.183.48.227,443,true,FR,CDG,Paris,159 ms,6.7
-35.181.77.67,443,true,FR,CDG,Paris,223 ms,6.5
-3.75.149.151,443,true,DE,FRA,Frankfurt,207 ms,6.4
+35.181.77.67,443,true,FR,CDG,Paris,214 ms,7.2
+213.183.48.227,443,true,FR,CDG,Paris,156 ms,7.1
+195.54.174.74,443,true,NL,AMS,Amsterdam,208 ms,7.0
