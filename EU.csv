@@ -1,14 +1,8 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-18.156.153.248,2053,true,DE,FRA,Frankfurt,211 ms,8.0
-3.71.189.51,2053,true,DE,FRA,Frankfurt,208 ms,6.8
-5.45.95.134,2053,true,NL,AMS,Amsterdam,231 ms,6.8
-18.159.111.125,2053,true,DE,FRA,Frankfurt,206 ms,5.0
-5.45.95.134,8443,true,NL,AMS,Amsterdam,220 ms,6.8
-37.252.13.100,8443,true,NL,AMS,Amsterdam,241 ms,6.5
-13.50.173.22,8443,true,SE,ARN,Stockholm,237 ms,5.3
-94.131.98.24,8443,true,SE,ARN,Stockholm,239 ms,5.0
-91.205.12.26,443,true,DE,MUC,Munich,251 ms,8.3
-3.78.187.212,443,true,DE,FRA,Frankfurt,214 ms,7.6
-35.181.77.67,443,true,FR,CDG,Paris,220 ms,7.2
-2.59.183.77,443,true,NL,AMS,Amsterdam,236 ms,7.0
-213.183.48.227,443,true,PL,WAW,Warsaw,154 ms,6.9
+3.71.189.51,2053,true,DE,FRA,Frankfurt,217 ms,7.0
+13.48.175.183,2053,true,SE,ARN,Stockholm,248 ms,6.3
+94.131.98.24,8443,true,SE,ARN,Stockholm,239 ms,7.0
+18.134.92.238,8443,true,GB,LHR,London,224 ms,6.7
+13.50.173.22,8443,true,SE,ARN,Stockholm,239 ms,6.2
+141.105.70.114,443,true,PL,WAW,Warsaw,156 ms,7.8
+213.183.48.227,443,true,PL,WAW,Warsaw,160 ms,6.7
