@@ -1,10 +1,9 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-143.42.17.72,2053,true,DE,FRA,Frankfurt,264 ms,5.1
-15.188.202.197,2083,true,FR,CDG,Paris,224 ms,6.9
-45.32.149.77,2096,true,FR,CDG,Paris,279 ms,6.0
-63.32.194.15,8443,true,IE,DUB,Dublin,235 ms,6.7
-151.80.246.87,8443,true,DE,FRA,Frankfurt,275 ms,6.7
-136.244.90.151,8443,true,DE,FRA,Frankfurt,289 ms,6.3
-136.244.95.103,8443,true,DE,FRA,Frankfurt,268 ms,5.9
-94.131.98.24,8443,true,SE,ARN,Stockholm,254 ms,5.5
-141.105.70.114,443,true,DE,FRA,Frankfurt,161 ms,5.3
+136.244.90.151,2053,true,DE,FRA,Frankfurt,258 ms,5.7
+136.244.119.80,2053,true,FR,CDG,Paris,266 ms,5.3
+140.82.38.208,2053,true,DE,FRA,Frankfurt,271 ms,5.2
+141.94.220.57,2053,true,FR,CDG,Paris,272 ms,5.0
+3.71.189.51,2053,true,DE,FRA,Frankfurt,217 ms,4.9
+15.188.202.197,2083,true,FR,CDG,Paris,211 ms,6.1
+151.80.246.87,8443,true,DE,FRA,Frankfurt,265 ms,5.1
+141.105.70.114,443,true,DE,FRA,Frankfurt,161 ms,7.7
