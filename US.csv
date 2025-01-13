@@ -1,2 +1,4 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-154.9.204.163,443,true,US,LAX,Los Angeles,173 ms,2.8
+154.9.204.163,443,true,US,LAX,Los Angeles,180 ms,3.0
+154.9.206.147,443,true,US,LAX,Los Angeles,179 ms,2.6
+173.242.123.147,443,true,US,LAX,Los Angeles,174 ms,2.5
