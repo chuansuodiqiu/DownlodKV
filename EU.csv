@@ -1,13 +1,15 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-3.9.9.137,2053,true,GB,LHR,London,220 ms,6.2
-140.82.38.208,2053,true,DE,FRA,Frankfurt,276 ms,5.8
-86.38.156.72,2053,true,DE,FRA,Frankfurt,285 ms,5.0
-15.188.202.197,2083,true,FR,CDG,Paris,216 ms,6.6
-13.53.81.150,2083,true,SE,ARN,Stockholm,242 ms,5.7
-185.217.108.43,2087,true,DE,FRA,Frankfurt,157 ms,7.6
-38.180.64.255,2087,true,DE,FRA,Frankfurt,234 ms,5.9
-136.244.90.151,8443,true,DE,FRA,Frankfurt,287 ms,6.0
-34.240.33.147,8443,true,IE,DUB,Dublin,237 ms,6.0
-136.244.119.80,8443,true,FR,CDG,Paris,276 ms,5.2
-136.244.90.180,8443,true,DE,FRA,Frankfurt,282 ms,5.0
-141.105.70.114,443,true,DE,FRA,Frankfurt,160 ms,6.9
+38.180.8.12,2053,true,DE,FRA,Frankfurt,229 ms,6.7
+195.54.175.79,2053,true,NL,AMS,Amsterdam,241 ms,5.2
+141.94.207.153,2053,true,FR,CDG,Paris,277 ms,4.9
+15.188.202.197,2083,true,FR,CDG,Paris,212 ms,6.8
+156.227.0.154,2083,true,DE,FRA,Frankfurt,221 ms,5.5
+185.217.108.43,2087,true,DE,FRA,Frankfurt,157 ms,11.3
+38.180.64.255,2087,true,DE,FRA,Frankfurt,235 ms,6.1
+63.176.11.74,2096,true,DE,FRA,Frankfurt,215 ms,5.6
+34.240.33.147,8443,true,IE,DUB,Dublin,221 ms,6.0
+13.40.128.14,8443,true,GB,LHR,London,243 ms,5.4
+141.94.222.105,8443,true,FR,CDG,Paris,269 ms,5.3
+45.150.64.245,8443,true,RU,DME,Moscow,263 ms,5.3
+141.95.159.211,8443,true,FR,CDG,Paris,274 ms,5.0
+141.105.70.114,443,true,DE,FRA,Frankfurt,156 ms,6.2
