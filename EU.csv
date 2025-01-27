@@ -1,11 +1,12 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-151.80.246.87,2053,true,DE,FRA,Frankfurt,300 ms,5.9
-3.71.189.51,2053,true,DE,FRA,Frankfurt,214 ms,5.3
-5.61.58.22,2053,true,NL,AMS,Amsterdam,216 ms,5.2
-159.65.122.67,2053,true,DE,FRA,Frankfurt,294 ms,4.9
-185.217.108.43,2087,true,DE,FRA,Frankfurt,175 ms,7.4
-195.54.174.132,8443,true,NL,AMS,Amsterdam,228 ms,6.6
-136.244.90.180,8443,true,DE,FRA,Frankfurt,272 ms,5.7
-151.80.246.87,8443,true,DE,FRA,Frankfurt,274 ms,5.5
-136.244.93.111,8443,true,DE,FRA,Frankfurt,260 ms,5.5
-141.95.127.112,8443,true,DE,FRA,Frankfurt,281 ms,5.4
+3.71.189.51,2053,true,DE,FRA,Frankfurt,211 ms,7.5
+38.180.99.183,2053,true,NL,AMS,Amsterdam,220 ms,7.4
+15.237.137.128,2053,true,FR,CDG,Paris,242 ms,6.1
+159.65.119.12,2053,true,DE,FRA,Frankfurt,263 ms,5.8
+37.221.126.43,2053,true,SE,ARN,Stockholm,231 ms,5.5
+185.217.108.43,2087,true,DE,FRA,Frankfurt,171 ms,10.9
+18.153.49.248,8443,true,DE,FRA,Frankfurt,210 ms,7.2
+63.32.194.15,8443,true,IE,DUB,Dublin,277 ms,6.1
+136.244.93.111,8443,true,DE,FRA,Frankfurt,268 ms,5.4
+141.94.205.22,8443,true,FR,CDG,Paris,275 ms,5.1
+151.80.246.87,8443,true,DE,FRA,Frankfurt,264 ms,5.1
