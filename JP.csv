@@ -1,4 +1,5 @@
 IP地址,端口,TLS,国家代码,数据中心,城市,网络延迟,下载速度
-141.11.139.211,8443,true,JP,NRT,Tokyo,102 ms,6.5
-103.232.214.11,8443,true,JP,NRT,Tokyo,92 ms,5.4
-8.222.78.174,443,true,JP,NRT,Tokyo,135 ms,3.9
+103.232.214.11,8443,true,JP,NRT,Tokyo,99 ms,7.1
+141.11.139.211,8443,true,JP,NRT,Tokyo,94 ms,6.0
+8.222.78.174,443,true,JP,NRT,Tokyo,117 ms,3.6
+8.209.217.106,443,true,JP,NRT,Tokyo,97 ms,3.3
